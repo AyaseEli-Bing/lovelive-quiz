@@ -604,3 +604,9 @@ legend {
 
 .colophon-link a { color: var(--site-accent); text-decoration: none; }
 .colophon-link a:hover, .colophon-link a:focus-visible { text-decoration: underline; }
+
+.modal-overlay { position: fixed; top: 0; right: 0; bottom: 0; left: 0; background: rgba(0,0,0,.45); display: grid; place-items: center; z-index: 50; padding: calc(24px * var(--site-space, 1)); }
+.modal { background: var(--site-surface); color: var(--site-fg); border: 1px solid var(--site-border); border-radius: var(--site-radius); max-width: 420px; padding: calc(24px * var(--site-space, 1)); box-shadow: 0 24px 60px rgba(0,0,0,.28); }
+.modal h2 { margin: 0 0 calc(8px * var(--site-space, 1)); font-size: calc(20px * var(--site-type, 1)); }
+.modal p { margin: 0 0 calc(18px * var(--site-space, 1)); color: var(--site-muted); font-size: calc(14px * var(--site-type, 1)); line-height: 1.65; text-wrap: pretty; }
+.modal-actions { display: flex; gap: calc(10px * var(--site-space, 1)); flex-wrap: wrap; }
