@@ -83,7 +83,7 @@ function menuView() {
     const units = g.units.map((u) => `<span class="chip">${u}</span>`).join("");
     return `<a class="group-card" href="#/quiz/${g.id}/">
       <h2>${g.name}</h2>
-      <p class="group-sub">${ids.length} 位成员 · ${g.subtitle}</p>
+      <p class="group-sub">${ids.length} 位成员 · ${QUESTIONS[g.id].length} 道题 · ${g.subtitle}</p>
       <p class="group-blurb">${g.blurb}</p>
       <div class="swatch-row" aria-hidden="true">${swatches}</div>
       <div class="unit-row">${units}</div>
@@ -92,7 +92,7 @@ function menuView() {
   }).join("");
   return `<section>
     <h2 class="view-title" tabindex="-1">先选一个团体</h2>
-    <p class="view-lead">每个团体一套独立的情景题，答完 10 题得到该团内匹配度最高的成员，以及完整九人排行。</p>
+    <p class="view-lead">每个团体一套独立的情景题，答完得到该团内匹配度最高的成员，以及完整九人排行。</p>
     <div class="group-menu">${cards}</div>
   </section>`;
 }
