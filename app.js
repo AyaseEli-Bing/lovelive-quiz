@@ -138,7 +138,7 @@ function resultView(gid, answers) {
   const m = MEMBERS[top.id];
   const runnerUp = ranked[1];
   const gap = top.pct - runnerUp.pct;
-  const colorTitle = `萌百色名：${m.colorName}${m.colorNote ? "。" + m.colorNote : ""}`;
+  const colorTitle = `色名：${m.colorName}${m.colorNote ? "。" + m.colorNote : ""}`;
   const colorMeta = `<span class="meta-color" title="${colorTitle}"><i aria-hidden="true"></i>#${m.color.slice(1).toUpperCase()}${m.colorNote ? "*" : ""}</span>`;
   const meta = `<p class="meta-line">${m.grade} · ${m.birthday} · ${m.blood}型 · ${colorMeta}</p>`;
   const traits = m.traits.map((t) => `<li>${t}</li>`).join("");
