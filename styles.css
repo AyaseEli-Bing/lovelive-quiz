@@ -158,6 +158,25 @@ body {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
 }
 
+.group-card.is-soon {
+  background: transparent;
+  border-style: dashed;
+  opacity: 0.72;
+  cursor: default;
+}
+
+.group-card.is-soon:hover,
+.group-card.is-soon:focus-visible {
+  transform: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.soon-chip {
+  display: inline-block;
+  margin-top: calc(16px * var(--site-space, 1));
+}
+
 .group-card h2 {
   margin: 0;
   font-size: calc(30px * var(--site-type, 1));

@@ -78,6 +78,13 @@ const optKeys = ["1", "2", "3", "4"];
 
 function menuView() {
   const cards = Object.values(GROUPS).map((g) => {
+    if (g.soon) {
+      return `<div class="group-card is-soon">
+      <h2>${g.name}</h2>
+      <p class="group-sub">${g.subtitle}</p>
+      <span class="chip soon-chip">题目制作中</span>
+    </div>`;
+    }
     const ids = membersOf(g.id);
     const swatches = ids.map((id) => `<span class="swatch" style="--member-color:${MEMBERS[id].color}"></span>`).join("");
     const units = g.units.map((u) => `<span class="chip">${u}</span>`).join("");
@@ -92,7 +99,7 @@ function menuView() {
   }).join("");
   return `<section>
     <h2 class="view-title" tabindex="-1">先选一个团体</h2>
-    <p class="view-lead">每个团体一套独立的情景题，答完得到该团内匹配度最高的成员，以及完整九人排行。</p>
+    <p class="view-lead">已开放的团体各有一套独立情景题，答完得到该团内匹配度最高的成员，以及完整九人排行。</p>
     <div class="group-menu">${cards}</div>
   </section>`;
 }
