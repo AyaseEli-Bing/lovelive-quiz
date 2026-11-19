@@ -601,3 +601,6 @@ legend {
 .chip { font-size: calc(11px * var(--site-type, 1)); padding: calc(3px * var(--site-space, 1)) calc(9px * var(--site-space, 1)); }
 .opt { padding: calc(14px * var(--site-space, 1)) calc(16px * var(--site-space, 1)); line-height: 1.55; }
 .masthead { padding-bottom: calc(16px * var(--site-space, 1)); }
+
+.colophon-link a { color: var(--site-accent); text-decoration: none; }
+.colophon-link a:hover, .colophon-link a:focus-visible { text-decoration: underline; }
