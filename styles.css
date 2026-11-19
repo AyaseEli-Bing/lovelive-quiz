@@ -68,7 +68,14 @@ body {
   gap: calc(16px * var(--site-space, 1));
 }
 
-.theme-toggle {
+.masthead-actions {
+  display: flex;
+  align-items: center;
+  gap: calc(8px * var(--site-space, 1));
+}
+
+.theme-toggle,
+.home-btn {
   flex: none;
   font: inherit;
   font-size: calc(13px * var(--site-type, 1));
@@ -82,14 +89,22 @@ body {
   transition: color calc(180ms * var(--site-motion, 1)) ease, border-color calc(180ms * var(--site-motion, 1)) ease, background calc(180ms * var(--site-motion, 1)) ease;
 }
 
+.home-btn {
+  text-decoration: none;
+  display: inline-block;
+}
+
 .theme-toggle:hover,
-.theme-toggle:focus-visible {
+.theme-toggle:focus-visible,
+.home-btn:hover,
+.home-btn:focus-visible {
   border-color: var(--site-accent);
   color: var(--site-accent);
   outline: none;
 }
 
-.theme-toggle:focus-visible {
+.theme-toggle:focus-visible,
+.home-btn:focus-visible {
   box-shadow: 0 0 0 2px color-mix(in srgb, var(--site-accent) 45%, transparent);
 }
 
