@@ -130,7 +130,6 @@ function menuView() {
     return `<a class="group-card" href="#/quiz/${g.id}/s${seed}/">
       <h2>${g.name}</h2>
       <p class="group-sub">${ids.length} 位成员 · ${QUESTIONS[g.id].length} 道题 · ${g.subtitle}</p>
-      <p class="group-blurb">${g.blurb}</p>
       <div class="swatch-row" aria-hidden="true">${swatches}</div>
       <div class="unit-row">${units}</div>
       <span class="group-cta">开始这个团的测试 →</span>

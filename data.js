@@ -58,7 +58,6 @@ export const GROUPS = {
     "id": "nijigasaki",
     "name": "虹ヶ咲",
     "subtitle": "虹咲学园校园偶像同好会",
-    "blurb": "十二个人各自闪耀，也彼此照亮的同好会。",
     "units": [
       "A·ZU·NA",
       "DiverDiva",
@@ -70,7 +69,6 @@ export const GROUPS = {
     "id": "liella",
     "name": "Liella!",
     "subtitle": "结丘女子高等学校校园偶像部",
-    "blurb": "从五个人开始，把「不可能」唱成可能的学园偶像。",
     "units": [
       "CatChu!",
       "KALEIDOSCORE",
@@ -81,7 +79,6 @@ export const GROUPS = {
     "id": "hasunosora",
     "name": "莲之空",
     "subtitle": "莲之空女学院校园偶像部",
-    "blurb": "在 traditions 与青春之间，认真活过的少女们。",
     "units": [
       "Cerise Bouquet",
       "DOLLCHESTRA",
