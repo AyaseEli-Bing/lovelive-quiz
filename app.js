@@ -223,7 +223,8 @@ function resultView(gid, answers, seed) {
       <p class="rank-note">${lead} 相似度＝作答方向与成员画像的夹角：100% 同向，50% 无关。</p>
     </div>
     <div class="actions">
-      <button class="btn btn-primary" type="button" data-restart>再测一次</button>
+      <button class="btn btn-primary" type="button" data-export>保存结果图</button>
+      <button class="btn btn-ghost" type="button" data-restart>再测一次</button>
       <button class="btn btn-ghost" type="button" data-again>改答案</button>
       <a class="btn btn-ghost" href="#/">换另一个团</a>
       <button class="btn btn-ghost" type="button" data-copy>复制结果链接</button>
@@ -264,6 +265,92 @@ function logView() {
   </section>`;
 }
 
+
+const EXPORT_FONT = '"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif';
+function hexA(hex, a) {
+  const n = parseInt(hex.slice(1), 16);
+  return `rgba(${(n >> 16) & 255},${(n >> 8) & 255},${n & 255},${a})`;
+}
+function roundRect(ctx, x, y, w, h, r) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+function loadImg(src) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.onload = () => resolve(img);
+    img.onerror = () => resolve(null);
+    img.src = src;
+  });
+}
+async function exportResult(gid, answers, seed) {
+  const ranked = score(gid, answers, seed);
+  const top = ranked[0];
+  const m = MEMBERS[top.id];
+  const W = 900, H = 1200;
+  const cv = document.createElement("canvas");
+  cv.width = W; cv.height = H;
+  const ctx = cv.getContext("2d");
+  ctx.fillStyle = "#f7f4ef"; ctx.fillRect(0, 0, W, H);
+  const grad = ctx.createRadialGradient(W * 0.12, 0, 0, W * 0.12, 0, W * 0.95);
+  grad.addColorStop(0, hexA(m.color, 0.30)); grad.addColorStop(1, "rgba(0,0,0,0)");
+  ctx.fillStyle = grad; ctx.fillRect(0, 0, W, H);
+  roundRect(ctx, 60, 100, W - 120, H - 200, 32);
+  ctx.fillStyle = "#fffdfa"; ctx.fill();
+  ctx.strokeStyle = "#ded6cc"; ctx.lineWidth = 2; ctx.stroke();
+  ctx.save(); ctx.beginPath(); ctx.rect(60, 100, 14, H - 200); ctx.clip();
+  ctx.fillStyle = m.color; ctx.fillRect(60, 100, 14, H - 200); ctx.restore();
+
+  const [sym, port] = await Promise.all([loadImg(`./assets/avatars/${top.id}.png`), loadImg(`./assets/portraits/${top.id}.png`)]);
+  if (sym) { ctx.globalAlpha = 0.12; ctx.drawImage(sym, W - 340, H - 560, 280, 280); ctx.globalAlpha = 1; }
+  const cx = 210, cy = 270, r = 78;
+  ctx.save(); ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.closePath(); ctx.clip();
+  if (port) ctx.drawImage(port, cx - r, cy - r, r * 2, r * 2);
+  else { ctx.fillStyle = m.color; ctx.fillRect(cx - r, cy - r, r * 2, r * 2); }
+  ctx.restore();
+  ctx.strokeStyle = m.color; ctx.lineWidth = 5; ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.stroke();
+
+  ctx.textBaseline = "alphabetic";
+  ctx.fillStyle = "#6f6779"; ctx.font = `24px ${EXPORT_FONT}`;
+  ctx.fillText(`${GROUPS[gid].name} · ${m.unit}`, 330, 232);
+  ctx.fillStyle = "#241f2b"; ctx.font = `bold 64px ${EXPORT_FONT}`;
+  ctx.fillText(m.nameZh, 330, 310);
+  ctx.fillStyle = "#6f6779"; ctx.font = `26px ${EXPORT_FONT}`;
+  ctx.fillText(`${m.nameJa} / ${m.romaji}`, 330, 356);
+
+  ctx.fillStyle = m.color; ctx.font = `bold 104px ${EXPORT_FONT}`;
+  ctx.fillText(`${top.pct}%`, 120, 540);
+  ctx.fillStyle = "#6f6779"; ctx.font = `26px ${EXPORT_FONT}`;
+  ctx.fillText(`相似度 · 本团 ${membersOf(gid).length} 人中最契合`, 330, 512);
+
+  const facts = [m.grade, m.birthday, m.blood ? m.blood + "型" : null].filter(Boolean).join(" · ");
+  ctx.fillStyle = "#241f2b"; ctx.font = `28px ${EXPORT_FONT}`;
+  ctx.fillText(`${facts} · ${m.color.toUpperCase()}`, 120, 620);
+
+  ctx.fillStyle = "#241f2b"; ctx.font = `bold 32px ${EXPORT_FONT}`;
+  ctx.fillText("像她的地方", 120, 720);
+  ctx.font = `28px ${EXPORT_FONT}`;
+  m.traits.slice(0, 4).forEach((t, i) => ctx.fillText(`· ${t}`, 120, 782 + i * 50));
+
+  ctx.fillStyle = "#6f6779"; ctx.font = `24px ${EXPORT_FONT}`;
+  ctx.fillText("LoveLive 角色性格测试 · ayaseeli-bing.github.io/lovelive-quiz", 120, H - 130);
+
+  const blob = await new Promise((res) => cv.toBlob(res, "image/png"));
+  if (!blob) throw new Error("toBlob failed");
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = `lovelive-result-${top.id}.png`;
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 4000);
+  window.dispatchEvent(new CustomEvent("resultexported", { detail: { w: W, h: H, bytes: blob.size, id: top.id } }));
+}
+
 function render() {
   const state = parseHash();
   if (state.view === "log") {
@@ -302,6 +389,10 @@ app.addEventListener("click", (event) => {
   }
   if (event.target.closest("[data-again]")) {
     location.hash = hashFor(state.gid, state.seed, state.answers.slice(0, -1), "quiz");
+    return;
+  }
+  if (event.target.closest("[data-export]") && state.view === "result") {
+    exportResult(state.gid, state.answers, state.seed).catch((err) => console.error("export failed", err));
     return;
   }
   const copy = event.target.closest("[data-copy]");
