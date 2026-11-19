@@ -373,52 +373,16 @@ legend {
   position: relative;
 }
 
-.avatar-frame {
-  position: relative;
-  flex: none;
-  width: calc(76px * var(--site-space, 1));
-  height: calc(76px * var(--site-space, 1));
-  border-radius: 50%;
-  overflow: hidden;
-  display: grid;
-  place-items: center;
-  background: var(--member-color, var(--site-accent));
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--site-fg) 15%, transparent);
-}
-
-.avatar {
+.result-watermark {
   position: absolute;
-  inset: calc(6px * var(--site-space, 1));
-  width: calc(100% - 12px * var(--site-space, 1));
-  height: calc(100% - 12px * var(--site-space, 1));
+  right: calc(16px * var(--site-space, 1));
+  bottom: calc(12px * var(--site-space, 1));
+  width: calc(150px * var(--site-space, 1));
+  height: calc(150px * var(--site-space, 1));
   object-fit: contain;
-  background: color-mix(in srgb, var(--member-color, var(--site-accent)) 8%, var(--site-surface));
-  border-radius: 50%;
+  opacity: 0.12;
+  pointer-events: none;
 }
-
-.avatar-frame .monogram {
-  width: 100%;
-  height: 100%;
-  border-radius: 0;
-  box-shadow: none;
-}
-
-.monogram {
-  flex: none;
-  width: calc(76px * var(--site-space, 1));
-  height: calc(76px * var(--site-space, 1));
-  border-radius: 50%;
-  background: var(--member-color, var(--site-accent));
-  color: var(--site-on-accent);
-  font-family: var(--site-font);
-  display: grid;
-  place-items: center;
-  font-size: calc(32px * var(--site-type, 1));
-  font-weight: 700;
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--site-fg) 15%, transparent);
-}
-
-.monogram.dark-ink { color: #2a2530; }
 
 .result-eyebrow {
   margin: 0;

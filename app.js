@@ -157,11 +157,6 @@ function resultView(gid, answers) {
     <article class="result-card" style="--member-color:${m.color}">
       <span class="result-glow" aria-hidden="true"></span>
       <div class="result-top">
-        <span class="avatar-frame">
-          <span class="monogram${m.darkInk ? " dark-ink" : ""}" aria-hidden="true">${m.mono}</span>
-          <img class="avatar" src="./assets/avatars/${top.id}.png" alt="${m.nameZh} 的角色形象"
-               decoding="async" onerror="this.remove()">
-        </span>
         <div>
           <p class="result-eyebrow">${GROUPS[gid].name} · ${m.unit}</p>
           <h2 class="result-name" tabindex="-1">${m.nameZh}</h2>
@@ -171,6 +166,8 @@ function resultView(gid, answers) {
       <p class="match-line"><span class="match-pct">${top.pct}%</span><span class="match-label">匹配度 · 本团 9 人中的最高分</span></p>
       ${meta}
       <div class="traits"><h3>像她的地方</h3><ul>${traits}</ul></div>
+      <img class="result-watermark" src="./assets/avatars/${top.id}.png" alt="" aria-hidden="true"
+           decoding="async" onerror="this.remove()">
     </article>
     <div class="ranking">
       <h3>${GROUPS[gid].name} 完整排行</h3>
