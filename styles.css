@@ -373,6 +373,24 @@ legend {
   position: relative;
 }
 
+.portrait-frame {
+  flex: none;
+  width: calc(76px * var(--site-space, 1));
+  height: calc(76px * var(--site-space, 1));
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--member-color, var(--site-accent));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--site-fg) 15%, transparent);
+}
+
+.portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  display: block;
+}
+
 .result-watermark {
   position: absolute;
   right: calc(16px * var(--site-space, 1));

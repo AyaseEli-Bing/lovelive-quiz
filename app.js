@@ -157,6 +157,10 @@ function resultView(gid, answers) {
     <article class="result-card" style="--member-color:${m.color}">
       <span class="result-glow" aria-hidden="true"></span>
       <div class="result-top">
+        <span class="portrait-frame">
+          <img class="portrait" src="./assets/portraits/${top.id}.png" alt="${m.nameZh} 的头像"
+               decoding="async" onerror="this.parentNode.remove()">
+        </span>
         <div>
           <p class="result-eyebrow">${GROUPS[gid].name} · ${m.unit}</p>
           <h2 class="result-name" tabindex="-1">${m.nameZh}</h2>
