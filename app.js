@@ -138,7 +138,7 @@ function menuView() {
   }).join("");
   return `<section>
     <h2 class="view-title" tabindex="-1">先选一个团体</h2>
-    <p class="view-lead">已开放的团体各有一套独立情景题，每次打开题目与选项顺序都会重新打乱；答完得到该团内相似度最高的成员，以及完整成员排行。</p>
+    <p class="view-lead">选一个团体，答 20 道情境题，看看你最像谁。</p>
     <div class="group-menu">${cards}</div>
   </section>`;
 }
@@ -168,7 +168,7 @@ function quizView(gid, answers, seed) {
       <legend>${question.q}</legend>
       <div class="opts">${opts}</div>
     </fieldset>
-    <div class="quiz-foot">${back}<span class="quiz-count">按 1–4 也可作答</span></div>
+    <div class="quiz-foot">${back}<span class="quiz-count">按 1–4 作答</span></div>
   </section>`;
 }
 
@@ -211,7 +211,7 @@ function resultView(gid, answers, seed) {
           <p class="result-romaji">${m.nameJa} / ${m.romaji}</p>
         </div>
       </div>
-      <p class="match-line"><span class="match-pct">${top.pct}%</span><span class="match-label">相似度 · 本团 ${membersOf(gid).length} 人中最契合</span></p>
+      <p class="match-line"><span class="match-pct">${top.pct}%</span><span class="match-label">本团 ${membersOf(gid).length} 人中最契合</span></p>
       ${meta}
       <div class="traits"><h3>像她的地方</h3><ul>${traits}</ul></div>
       <div class="unit-row" aria-label="最契合的性格维度">${topDims}</div>
@@ -221,7 +221,7 @@ function resultView(gid, answers, seed) {
     <div class="ranking">
       <h3>${GROUPS[gid].name} 完整排行</h3>
       ${rows}
-      <p class="rank-note">${lead} 相似度按你的作答方向与成员性格画像的夹角折算：100% 为完全同向，50% 为互不相关；各团画像独立，跨团不可直接比较。</p>
+      <p class="rank-note">${lead} 相似度＝作答方向与成员画像的夹角：100% 同向，50% 无关。</p>
     </div>
     <div class="actions">
       <button class="btn btn-primary" type="button" data-restart>再测一次</button>
@@ -258,7 +258,7 @@ function logView() {
   </section>`).join("");
   return `<section>
     <h2 class="view-title" tabindex="-1">更新日志</h2>
-    <p class="view-lead">按时间倒序记录每次发布的变化。</p>
+    <p class="view-lead">按时间倒序。</p>
     <div class="log-list">${entries}</div>
     <div class="actions"><a class="btn btn-ghost" href="#/">返回菜单</a></div>
   </section>`;

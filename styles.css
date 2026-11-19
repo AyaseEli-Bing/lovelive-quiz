@@ -592,3 +592,12 @@ legend {
 .log-entry { padding: calc(18px * var(--site-space, 1)); }
 .log-entry h3 { margin: 0 0 calc(8px * var(--site-space, 1)); font-size: calc(16px * var(--site-type, 1)); }
 .log-time { margin: 0 0 calc(4px * var(--site-space, 1)); font-size: calc(12px * var(--site-type, 1)); color: var(--site-muted); font-variant-numeric: tabular-nums; }
+
+/* 清爽排版覆盖 */
+.view-lead, .rank-note, .group-blurb { text-wrap: pretty; }
+.view-lead, .rank-note { max-width: 60ch; }
+.group-blurb { color: var(--site-muted); }
+.wordmark, .result-name, .view-title { letter-spacing: 0.01em; }
+.chip { font-size: calc(11px * var(--site-type, 1)); padding: calc(3px * var(--site-space, 1)) calc(9px * var(--site-space, 1)); }
+.opt { padding: calc(14px * var(--site-space, 1)) calc(16px * var(--site-space, 1)); line-height: 1.55; }
+.masthead { padding-bottom: calc(16px * var(--site-space, 1)); }
