@@ -131,14 +131,10 @@ function resultView(gid, answers) {
   const m = MEMBERS[top.id];
   const runnerUp = ranked[1];
   const gap = top.pct - runnerUp.pct;
-  const stats = [
-    ["应援色", m.colorName],
-    ["小队", m.unit],
-    ["生日", m.birthday],
-    ["血型", m.blood],
-    ["学年", m.grade],
-    ["代表曲", m.song],
-  ].map(([k, v]) => `<p class="stat"><span>${k}</span> <b>${v}</b></p>`).join("");
+  const colorMeta = m.colorNote
+    ? `<span class="meta-color" title="${m.colorNote}"><i aria-hidden="true"></i>${m.colorName}*</span>`
+    : `<span class="meta-color"><i aria-hidden="true"></i>${m.colorName}</span>`;
+  const meta = `<p class="meta-line">${m.grade} · ${m.birthday} · ${m.blood}型 · ${colorMeta}</p>`;
   const traits = m.traits.map((t) => `<li>${t}</li>`).join("");
   const rows = ranked.map((r, i) => {
     const rm = MEMBERS[r.id];
@@ -149,9 +145,7 @@ function resultView(gid, answers) {
       <span class="rank-pct">${r.pct}%</span>
     </div>`;
   }).join("");
-  const colorNote = m.colorNote ? `<p class="color-note">${m.colorNote}。</p>` : "";
-  const lead = gap > 0
-    ? `比第二名 ${runnerUp && MEMBERS[runnerUp.id].nameZh} 高 ${gap} 个百分点。`
+  const lead = gap > 0 ? `比第二名 ${runnerUp && MEMBERS[runnerUp.id].nameZh} 高 ${gap} 个百分点。`
     : `与第二名同分，按主问题命中数排在前面。`;
   return `<section>
     <article class="result-card" style="--member-color:${m.color}">
@@ -169,8 +163,7 @@ function resultView(gid, answers) {
         </div>
       </div>
       <p class="match-line"><span class="match-pct">${top.pct}%</span><span class="match-label">匹配度 · 本团 9 人中的最高分</span></p>
-      <div class="stats">${stats}</div>
-      ${colorNote}
+      ${meta}
       <div class="traits"><h3>像她的地方</h3><ul>${traits}</ul></div>
     </article>
     <div class="ranking">
