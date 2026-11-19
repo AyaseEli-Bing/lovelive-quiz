@@ -492,7 +492,7 @@ legend {
 
 .rank-row {
   display: grid;
-  grid-template-columns: calc(28px * var(--site-space, 1)) minmax(0, 1fr) calc(84px * var(--site-space, 1));
+  grid-template-columns: calc(28px * var(--site-space, 1)) minmax(0, 1fr) calc(84px * var(--site-space, 1)) calc(44px * var(--site-space, 1));
   align-items: center;
   gap: calc(12px * var(--site-space, 1));
   padding: calc(9px * var(--site-space, 1)) 0;
@@ -516,6 +516,9 @@ legend {
 }
 
 .rank-pct { font-size: calc(13px * var(--site-type, 1)); color: var(--site-muted); text-align: right; }
+
+.view-title:focus,
+.result-name:focus { outline: none; }
 
 .rank-note {
   margin: calc(14px * var(--site-space, 1)) 0 0;

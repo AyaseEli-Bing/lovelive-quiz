@@ -123,7 +123,7 @@ function score(gid, answers, seed) {
       const blended = got[id] + LAM * (cos + 1) / 2;
       return { id, count: got[id], cos, blended, pct: Math.round((100 * blended) / (cap[id] + LAM)) };
     })
-    .sort((x, y) => y.blended - x.blended || y.count - x.count);
+    .sort((x, y) => y.pct - x.pct || y.count - x.count || y.blended - x.blended);
 }
 
 const optKeys = ["1", "2", "3", "4"];
