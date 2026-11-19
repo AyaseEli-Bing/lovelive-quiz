@@ -33,25 +33,60 @@ darkMedia.addEventListener("change", (event) => {
 
 const membersOf = (gid) => Object.keys(MEMBERS).filter((id) => MEMBERS[id].group === gid);
 
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function shuffled(arr, rng) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// seed 为 null 时保持原始顺序（兼容旧链接）；否则按种子打乱题目与选项。
+function buildOrder(gid, seed) {
+  if (seed == null) return QUESTIONS[gid];
+  const rng = mulberry32(seed);
+  return shuffled(QUESTIONS[gid], rng).map((q) => ({ ...q, opts: shuffled(q.opts, rng) }));
+}
+
+const newSeed = () => (Math.random() * 0x7fffffff) | 0;
+
+function hashFor(gid, seed, answers, verb) {
+  const pre = seed == null ? `#/${verb}/${gid}/` : `#/${verb}/${gid}/s${seed}/`;
+  return pre + answers.join(",");
+}
+
 function parseHash() {
   const parts = location.hash.replace(/^#\/?/, "").split("/").filter((s) => s !== "");
   if (parts.length === 0) return { view: "menu" };
-  const [verb, gid, raw] = parts;
+  const [verb, gid, seg3, seg4] = parts;
   if (!QUESTIONS[gid] || (verb !== "quiz" && verb !== "result")) return { view: "menu" };
-  const qs = QUESTIONS[gid];
+  let seed = null, raw;
+  if (typeof seg3 === "string" && /^s\d+$/.test(seg3)) { seed = parseInt(seg3.slice(1), 10); raw = seg4; }
+  else { raw = seg3; }
+  const order = buildOrder(gid, seed);
   const answers = [];
   for (const token of (raw || "").split(",")) {
     if (token === "") continue;
     const n = Number(token);
-    if (!Number.isInteger(n) || n < 0 || n >= qs[answers.length].opts.length) return { view: "menu" };
+    if (!Number.isInteger(n) || n < 0 || n >= order[answers.length].opts.length) return { view: "menu" };
     answers.push(n);
-    if (answers.length >= qs.length) break;
+    if (answers.length >= order.length) break;
   }
-  return { view: answers.length >= qs.length ? "result" : "quiz", gid, answers };
+  return { view: answers.length >= order.length ? "result" : "quiz", gid, seed, answers };
 }
 
-function score(gid, answers) {
-  const qs = QUESTIONS[gid];
+function score(gid, answers, seed) {
+  const qs = buildOrder(gid, seed);
   const tally = {};
   for (const id of membersOf(gid)) tally[id] = { score: 0, primaries: 0, ceiling: 0 };
   qs.forEach((question, qi) => {
@@ -77,6 +112,7 @@ function score(gid, answers) {
 const optKeys = ["1", "2", "3", "4"];
 
 function menuView() {
+  const seed = newSeed();
   const cards = Object.values(GROUPS).map((g) => {
     if (g.soon) {
       return `<div class="group-card is-soon">
@@ -88,7 +124,7 @@ function menuView() {
     const ids = membersOf(g.id);
     const swatches = ids.map((id) => `<span class="swatch" style="--member-color:${MEMBERS[id].color}"></span>`).join("");
     const units = g.units.map((u) => `<span class="chip">${u}</span>`).join("");
-    return `<a class="group-card" href="#/quiz/${g.id}/">
+    return `<a class="group-card" href="#/quiz/${g.id}/s${seed}/">
       <h2>${g.name}</h2>
       <p class="group-sub">${ids.length} 位成员 · ${QUESTIONS[g.id].length} 道题 · ${g.subtitle}</p>
       <p class="group-blurb">${g.blurb}</p>
@@ -99,15 +135,16 @@ function menuView() {
   }).join("");
   return `<section>
     <h2 class="view-title" tabindex="-1">先选一个团体</h2>
-    <p class="view-lead">已开放的团体各有一套独立情景题，答完得到该团内匹配度最高的成员，以及完整九人排行。</p>
+    <p class="view-lead">已开放的团体各有一套独立情景题，每次打开题目与选项顺序都会重新打乱；答完得到该团内匹配度最高的成员，以及完整九人排行。</p>
     <div class="group-menu">${cards}</div>
   </section>`;
 }
 
-function quizView(gid, answers) {
+function quizView(gid, answers, seed) {
+  const order = buildOrder(gid, seed);
   const qi = answers.length;
-  const question = QUESTIONS[gid][qi];
-  const total = QUESTIONS[gid].length;
+  const question = order[qi];
+  const total = order.length;
   const opts = question.opts.map((opt, i) => `<button class="opt" type="button" data-opt="${i}">
       <span class="opt-key" aria-hidden="true">${optKeys[i]}</span>
       <span>${opt.text}</span>
@@ -132,8 +169,8 @@ function quizView(gid, answers) {
   </section>`;
 }
 
-function resultView(gid, answers) {
-  const ranked = score(gid, answers);
+function resultView(gid, answers, seed) {
+  const ranked = score(gid, answers, seed);
   const top = ranked[0];
   const m = MEMBERS[top.id];
   const runnerUp = ranked[1];
@@ -194,13 +231,11 @@ function render() {
     app.querySelector(".view-title").focus({ preventScroll: true });
     return;
   }
-  app.innerHTML = state.view === "quiz" ? quizView(state.gid, state.answers) : resultView(state.gid, state.answers);
+  app.innerHTML = state.view === "quiz"
+    ? quizView(state.gid, state.answers, state.seed)
+    : resultView(state.gid, state.answers, state.seed);
   const anchor = app.querySelector(state.view === "quiz" ? ".quiz-head .view-title" : ".result-name");
   anchor.focus({ preventScroll: true });
-}
-
-function answersTo(state) {
-  return state.answers.length ? `${state.answers.join(",")}` : "";
 }
 
 app.addEventListener("click", (event) => {
@@ -208,24 +243,20 @@ app.addEventListener("click", (event) => {
   const opt = event.target.closest("[data-opt]");
   if (opt && state.view === "quiz") {
     const next = [...state.answers, Number(opt.dataset.opt)];
-    const full = QUESTIONS[state.gid].length;
-    location.hash = next.length >= full
-      ? `#/result/${state.gid}/${next.join(",")}`
-      : `#/quiz/${state.gid}/${next.join(",")}`;
+    const full = buildOrder(state.gid, state.seed).length;
+    location.hash = hashFor(state.gid, state.seed, next, next.length >= full ? "result" : "quiz");
     return;
   }
   if (event.target.closest("[data-back]")) {
-    const prev = state.answers.slice(0, -1);
-    location.hash = `#/quiz/${state.gid}/${answersTo({ answers: prev })}`;
+    location.hash = hashFor(state.gid, state.seed, state.answers.slice(0, -1), "quiz");
     return;
   }
   if (event.target.closest("[data-restart]")) {
-    location.hash = `#/quiz/${state.gid}/`;
+    location.hash = `#/quiz/${state.gid}/s${newSeed()}/`;
     return;
   }
   if (event.target.closest("[data-again]")) {
-    const prev = state.answers.slice(0, -1);
-    location.hash = prev.length ? `#/quiz/${state.gid}/${prev.join(",")}` : `#/quiz/${state.gid}/`;
+    location.hash = hashFor(state.gid, state.seed, state.answers.slice(0, -1), "quiz");
     return;
   }
   const copy = event.target.closest("[data-copy]");
@@ -242,14 +273,14 @@ document.addEventListener("keydown", (event) => {
   if (event.metaKey || event.ctrlKey || event.altKey) return;
   const state = parseHash();
   if (state.view !== "quiz") return;
+  const order = buildOrder(state.gid, state.seed);
   const index = optKeys.indexOf(event.key);
-  if (index > -1 && index < QUESTIONS[state.gid][state.answers.length].opts.length) {
+  if (index > -1 && index < order[state.answers.length].opts.length) {
     event.preventDefault();
-    location.hash = `#/quiz/${state.gid}/${[...state.answers, index].join(",")}`;
+    location.hash = hashFor(state.gid, state.seed, [...state.answers, index], "quiz");
   } else if (event.key === "Backspace") {
     event.preventDefault();
-    const prev = state.answers.slice(0, -1);
-    location.hash = prev.length ? `#/quiz/${state.gid}/${prev.join(",")}` : `#/quiz/${state.gid}/`;
+    location.hash = hashFor(state.gid, state.seed, state.answers.slice(0, -1), "quiz");
   }
 });
 
