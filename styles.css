@@ -587,3 +587,8 @@ legend {
     transition-duration: 1ms;
   }
 }
+
+.log-list { display: grid; gap: calc(14px * var(--site-space, 1)); }
+.log-entry { padding: calc(18px * var(--site-space, 1)); }
+.log-entry h3 { margin: 0 0 calc(8px * var(--site-space, 1)); font-size: calc(16px * var(--site-type, 1)); }
+.log-time { margin: 0 0 calc(4px * var(--site-space, 1)); font-size: calc(12px * var(--site-type, 1)); color: var(--site-muted); font-variant-numeric: tabular-nums; }
