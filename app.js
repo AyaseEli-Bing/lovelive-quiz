@@ -1,4 +1,5 @@
 import { DIMENSIONS, GROUPS, MEMBERS, QUESTIONS } from "./data.js";
+import { CHANGELOG } from "./changelog.js";
 
 const app = document.getElementById("app");
 
@@ -233,29 +234,11 @@ function resultView(gid, answers, seed) {
   </section>`;
 }
 
-const CHANGELOG = [
-  { time: "2026-11-19 13:44", title: "计分升级为性格维度模型", items: ["6 维性格画像＋cosine 相似度取代选项加分", "结果页显示相似度与最契合的 2 个性格维度", "52 人画像、全团选项载荷更新；四选一/打乱/分享链接不变"] },
-  { time: "2026-11-19 13:25", title: "移除黄昏燐光（106期）", items: ["桂城泉小队回退 Edel Note", "莲之空小队列表恢复三个"] },
-  { time: "2026-11-19 13:07", title: "头部加常驻主页按钮", items: ["任何视图一键回菜单", "副标题更新为五团均开放"] },
-  { time: "2026-11-19 13:03", title: "新增三个团体", items: ["虹ヶ咲 12 人 / Liella! 11 人 / 莲之空 11 人，共 52 人", "各 16 题自动配平", "LLWiki 色值/徽标、萌百资料/头像；莲之空无血型自动省略"] },
-  { time: "2026-11-19 12:19", title: "题目与选项随机打乱", items: ["每次打开重新打乱", "随机种子写入 hash，分享/刷新可复原", "旧链接兼容"] },
-  { time: "2026-11-19 12:10", title: "性格描述改写", items: ["「像她的地方」改为第二人称纯性格描述，去除角色梗"] },
-  { time: "2026-11-19 12:03", title: "结果页加角色头像", items: ["圆形头像与结尾水印并存"] },
-  { time: "2026-11-19 11:56", title: "徽标改为结尾水印", items: ["150px、12% 透明度，不拦截点击"] },
-  { time: "2026-11-19 11:50", title: "徽标改用 LLWiki Symbol", items: ["透明方形、成员应援色"] },
-  { time: "2026-11-19 11:19", title: "页脚精简", items: ["仅保留免责声明"] },
-  { time: "2026-11-19 11:11", title: "应援色改用 LLWiki 色值", items: ["小鸟/善子色名与色值不符加 * 悬停说明"] },
-  { time: "2026-11-19 10:43", title: "个人信息压缩为单行", items: ["学年/生日/血型/应援色", "移除代表曲与标签词"] },
-  { time: "2026-11-19 10:39", title: "每组扩到 15 题", items: ["新增功劳归属/方向判断/评价分歧/社交压力/回忆五题"] },
-  { time: "2026-11-19 10:33", title: "重写全部选项", items: ["去掉标志性道具与口头禅，更依赖自我判断"] },
-  { time: "2026-11-19 03:49", title: "首发", items: ["μ's / Aqours 双团性格测试"] },
-];
-
 function logView() {
   const entries = CHANGELOG.map((e) => `<section class="log-entry result-card">
     <p class="log-time">${e.time}</p>
     <h3>${e.title}</h3>
-    <div class="traits"><ul>${e.items.map((i) => `<li>${i}</li>`).join("")}</ul></div>
+    ${e.items.length ? `<div class="traits"><ul>${e.items.map((i) => `<li>${i}</li>`).join("")}</ul></div>` : ""}
   </section>`).join("");
   return `<section>
     <h2 class="view-title" tabindex="-1">更新日志</h2>
