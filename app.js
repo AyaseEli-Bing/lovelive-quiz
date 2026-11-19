@@ -151,7 +151,7 @@ function menuView() {
   }).join("");
   return `<section>
     <h2 class="view-title" tabindex="-1">先选一个团体</h2>
-    <p class="view-lead">选一个团体，答 20 道情境题，看看你最像谁。</p>
+    <p class="view-lead">选一个团体，做完一套团内情境题，看看你最像谁。</p>
     <div class="group-menu">${cards}</div>
   </section>`;
 }
