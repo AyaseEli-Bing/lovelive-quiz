@@ -347,11 +347,10 @@ async function exportResult(gid, answers, seed) {
   window.dispatchEvent(new CustomEvent("resultexported", { detail: { w: W, h: H, bytes: blob.size, id: top.id } }));
 }
 
-const WARN_GROUPS = new Set(["nijigasaki", "liella", "hasunosora"]);
 const warnSeen = new Set();
 
 function maybeWarn(gid, atStart) {
-  if (!atStart || !WARN_GROUPS.has(gid) || warnSeen.has(gid)) return;
+  if (!atStart || !GROUPS[gid] || warnSeen.has(gid)) return;
   warnSeen.add(gid);
   const box = document.createElement("div");
   box.className = "modal-overlay";
@@ -362,11 +361,11 @@ function maybeWarn(gid, atStart) {
     <p>${GROUPS[gid].name} 的题目仍在打磨，尚未完整测试，结果可能偏差较大，仅供娱乐参考。</p>
     <div class="modal-actions">
       <button class="btn btn-primary" type="button" data-warn-ok>继续答题</button>
-      <a class="btn btn-ghost" href="#/">返回主页</a>
+      <a class="btn btn-ghost" href="#/" data-warn-home>返回主页</a>
     </div>
   </div>`;
   box.addEventListener("click", (e) => {
-    if (e.target === box || e.target.closest("[data-warn-ok]")) box.remove();
+    if (e.target === box || e.target.closest("[data-warn-ok], [data-warn-home]")) box.remove();
   });
   document.body.appendChild(box);
   const ok = box.querySelector("[data-warn-ok]");
@@ -374,6 +373,7 @@ function maybeWarn(gid, atStart) {
 }
 
 function render() {
+  document.querySelectorAll(".modal-overlay").forEach((n) => n.remove());
   const state = parseHash();
   if (state.view === "log") {
     app.innerHTML = logView();
@@ -430,6 +430,7 @@ app.addEventListener("click", (event) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.metaKey || event.ctrlKey || event.altKey) return;
+  if (document.querySelector(".modal-overlay")) return;
   const state = parseHash();
   if (state.view !== "quiz") return;
   const order = buildOrder(state.gid, state.seed);
