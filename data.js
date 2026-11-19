@@ -703,7 +703,8 @@ export const MEMBERS = {
       "会把别人的需求放在前面",
       "紧张时靠反复练习安定",
       "不擅争抢，但从不放弃",
-      "把「想和你们在一起」藏在努力里"
+      "把「想和你们在一起」藏在努力里",
+      "心思细到能察觉语气变化"
     ],
     "profile": [
       -0.5,
@@ -733,7 +734,8 @@ export const MEMBERS = {
       "内心是好孩子",
       "被说幼稚会炸毛",
       "争强好胜写在脸上",
-      "偷偷希望被当成大人"
+      "偷偷希望被当成大人",
+      "不服气的表情藏不住"
     ],
     "profile": [
       0.5,
@@ -763,7 +765,8 @@ export const MEMBERS = {
       "台上台下反差很大",
       "习惯把紧张藏进排练",
       "对角色比对自己更上心",
-      "安静地打磨每一个细节"
+      "安静地打磨每一个细节",
+      "把情绪收在台下"
     ],
     "profile": [
       -0.5,
@@ -793,7 +796,8 @@ export const MEMBERS = {
       "看得清场面，也控得住场",
       "不轻易表态，一表态就准",
       "被戳破少女心会嘴硬",
-      "把可靠当成默认状态"
+      "把可靠当成默认状态",
+      "越从容越让人安心"
     ],
     "profile": [
       0.5,
@@ -823,7 +827,8 @@ export const MEMBERS = {
       "乐于尝试新事物",
       "冷场时主动抛梗",
       "越难越觉得有意思",
-      "把快乐传染给全场"
+      "把快乐传染给全场",
+      "笑声比人先到"
     ],
     "profile": [
       1,
@@ -853,7 +858,8 @@ export const MEMBERS = {
       "关键时刻很可靠",
       "能躺着就不坐着",
       "看似散漫，实则心里有数",
-      "把精力留给真正重要的事"
+      "把精力留给真正重要的事",
+      "慢半拍也不慌"
     ],
     "profile": [
       -0.5,
@@ -883,7 +889,8 @@ export const MEMBERS = {
       "想把喜欢传遍世界",
       "谈到热爱就眼睛发亮",
       "认定的事九头牛拉不回",
-      "把「喜欢」大声喊出来"
+      "把「喜欢」大声喊出来",
+      "眼里有光就停不下来"
     ],
     "profile": [
       0.5,
@@ -913,7 +920,8 @@ export const MEMBERS = {
       "我行我素",
       "节奏慢，但从不慌乱",
       "用歌声和自然安抚人心",
-      "把日子过成舒缓的调子"
+      "把日子过成舒缓的调子",
+      "把温柔给得很安静"
     ],
     "profile": [
       -0.5,
@@ -943,7 +951,8 @@ export const MEMBERS = {
       "渴望与大家相连",
       "借助小道具传达说不出口的话",
       "面无表情，心里翻涌",
-      "把「想被理解」写进小道具"
+      "把「想被理解」写进小道具",
+      "话少，心意很满"
     ],
     "profile": [
       -1,
@@ -973,7 +982,8 @@ export const MEMBERS = {
       "真心希望他人幸福",
       "先讲道理，再谈感情",
       "看不惯散漫，也逼自己紧绷",
-      "把「正确」看得比「舒服」重"
+      "把「正确」看得比「舒服」重",
+      "对就是对，错就是错"
     ],
     "profile": [
       -0.5,
@@ -1003,7 +1013,8 @@ export const MEMBERS = {
       "为喜欢的事鼓起勇气",
       "嘴上嫌弃，手上却帮忙",
       "被夸会先怀疑再开心",
-      "把不安藏在直率后面"
+      "把不安藏在直率后面",
+      "越被期待越紧张"
     ],
     "profile": [
       -1,
@@ -1033,7 +1044,8 @@ export const MEMBERS = {
       "偶尔任性",
       "要什么就大声争取",
       "舞台越大越兴奋",
-      "把「我值得」写在脸上"
+      "把「我值得」写在脸上",
+      "把野心写在台步里"
     ],
     "profile": [
       1,
@@ -1736,6 +1748,7 @@ export const QUESTIONS = {
         {
           "text": "想到就冲出去，边做边想办法",
           "from": "honoka",
+          "sec": "rin",
           "vec": [
             1,
             1,
@@ -1748,6 +1761,7 @@ export const QUESTIONS = {
         {
           "text": "凡事先想清楚再动手",
           "from": "eli",
+          "sec": "maki",
           "vec": [
             0,
             -0.5,
@@ -1760,6 +1774,7 @@ export const QUESTIONS = {
         {
           "text": "说话温和，很少与人起冲突",
           "from": "kotori",
+          "sec": "hanayo",
           "vec": [
             -0.5,
             -0.5,
@@ -1772,6 +1787,7 @@ export const QUESTIONS = {
         {
           "text": "认真守规矩，看不惯敷衍",
           "from": "umi",
+          "sec": "nico",
           "vec": [
             -0.5,
             -0.5,
@@ -1789,6 +1805,7 @@ export const QUESTIONS = {
         {
           "text": "精力充沛，闲不下来",
           "from": "rin",
+          "sec": "nozomi",
           "vec": [
             1,
             1,
@@ -1801,6 +1818,7 @@ export const QUESTIONS = {
         {
           "text": "把喜欢藏得很深，嘴上却不肯承认",
           "from": "maki",
+          "sec": "honoka",
           "vec": [
             -1,
             -0.5,
@@ -1813,6 +1831,7 @@ export const QUESTIONS = {
         {
           "text": "安静，但对喜欢的事异常专注",
           "from": "hanayo",
+          "sec": "eli",
           "vec": [
             -1,
             -0.5,
@@ -1825,6 +1844,7 @@ export const QUESTIONS = {
         {
           "text": "很在意自己呈现出来的样子",
           "from": "nico",
+          "sec": "kotori",
           "vec": [
             0.5,
             0.5,
@@ -1842,6 +1862,7 @@ export const QUESTIONS = {
         {
           "text": "看得透，却不说破",
           "from": "nozomi",
+          "sec": "umi",
           "vec": [
             0.5,
             -0.5,
@@ -1854,6 +1875,7 @@ export const QUESTIONS = {
         {
           "text": "总能把低落的气氛带起来",
           "from": "honoka",
+          "sec": "rin",
           "vec": [
             1,
             1,
@@ -1866,6 +1888,7 @@ export const QUESTIONS = {
         {
           "text": "对自己要求高，不太允许出错",
           "from": "eli",
+          "sec": "maki",
           "vec": [
             0,
             -0.5,
@@ -1878,6 +1901,7 @@ export const QUESTIONS = {
         {
           "text": "擅长照顾别人的感受",
           "from": "kotori",
+          "sec": "hanayo",
           "vec": [
             -0.5,
             -0.5,
@@ -1895,6 +1919,7 @@ export const QUESTIONS = {
         {
           "text": "容易害羞，但该说的还是会说",
           "from": "umi",
+          "sec": "nico",
           "vec": [
             -0.5,
             -0.5,
@@ -1907,6 +1932,7 @@ export const QUESTIONS = {
         {
           "text": "情绪来得快去得也快",
           "from": "rin",
+          "sec": "nozomi",
           "vec": [
             1,
             1,
@@ -1919,6 +1945,7 @@ export const QUESTIONS = {
         {
           "text": "一个人练琴到深夜也不觉得苦",
           "from": "maki",
+          "sec": "honoka",
           "vec": [
             -1,
             -0.5,
@@ -1931,6 +1958,7 @@ export const QUESTIONS = {
         {
           "text": "习惯先反省自己",
           "from": "hanayo",
+          "sec": "eli",
           "vec": [
             -1,
             -0.5,
@@ -1948,6 +1976,7 @@ export const QUESTIONS = {
         {
           "text": "用玩笑和毒舌掩饰认真",
           "from": "nico",
+          "sec": "kotori",
           "vec": [
             0.5,
             0.5,
@@ -1960,6 +1989,7 @@ export const QUESTIONS = {
         {
           "text": "喜欢用轻松的方式化解尴尬",
           "from": "nozomi",
+          "sec": "umi",
           "vec": [
             0.5,
             -0.5,
@@ -1972,6 +2002,7 @@ export const QUESTIONS = {
         {
           "text": "大家犹豫时先喊「试试看」",
           "from": "honoka",
+          "sec": "rin",
           "vec": [
             1,
             1,
@@ -1984,6 +2015,7 @@ export const QUESTIONS = {
         {
           "text": "看起来可靠，其实也会偷偷紧张",
           "from": "eli",
+          "sec": "maki",
           "vec": [
             0,
             -0.5,
@@ -2001,6 +2033,7 @@ export const QUESTIONS = {
         {
           "text": "看着随和，其实有自己的主意",
           "from": "kotori",
+          "sec": "hanayo",
           "vec": [
             -0.5,
             -0.5,
@@ -2013,6 +2046,7 @@ export const QUESTIONS = {
         {
           "text": "对自己比别人更严格",
           "from": "umi",
+          "sec": "nico",
           "vec": [
             -0.5,
             -0.5,
@@ -2025,6 +2059,7 @@ export const QUESTIONS = {
         {
           "text": "为朋友可以两肋插刀",
           "from": "rin",
+          "sec": "nozomi",
           "vec": [
             1,
             1,
@@ -2037,6 +2072,7 @@ export const QUESTIONS = {
         {
           "text": "被看穿心思时会突然慌乱",
           "from": "maki",
+          "sec": "honoka",
           "vec": [
             -1,
             -0.5,
@@ -2054,6 +2090,7 @@ export const QUESTIONS = {
         {
           "text": "容易被忽略，却一直在默默努力",
           "from": "hanayo",
+          "sec": "eli",
           "vec": [
             -1,
             -0.5,
@@ -2066,6 +2103,7 @@ export const QUESTIONS = {
         {
           "text": "比谁都努力，只是不让人看见",
           "from": "nico",
+          "sec": "kotori",
           "vec": [
             0.5,
             0.5,
@@ -2078,6 +2116,7 @@ export const QUESTIONS = {
         {
           "text": "相信直觉，也愿意给人留余地",
           "from": "nozomi",
+          "sec": "umi",
           "vec": [
             0.5,
             -0.5,
@@ -2090,6 +2129,7 @@ export const QUESTIONS = {
         {
           "text": "难过也睡一觉就过去",
           "from": "honoka",
+          "sec": "rin",
           "vec": [
             1,
             1,
@@ -2107,6 +2147,7 @@ export const QUESTIONS = {
         {
           "text": "嘴上理性，心里比谁都在意",
           "from": "eli",
+          "sec": "maki",
           "vec": [
             0,
             -0.5,
@@ -2119,6 +2160,7 @@ export const QUESTIONS = {
         {
           "text": "愿意为在意的人默默付出",
           "from": "kotori",
+          "sec": "hanayo",
           "vec": [
             -0.5,
             -0.5,
@@ -2131,6 +2173,7 @@ export const QUESTIONS = {
         {
           "text": "重视传统和承诺",
           "from": "umi",
+          "sec": "nico",
           "vec": [
             -0.5,
             -0.5,
@@ -2143,6 +2186,7 @@ export const QUESTIONS = {
         {
           "text": "嘴上逞强，心里很软",
           "from": "rin",
+          "sec": "nozomi",
           "vec": [
             1,
             1,
@@ -2160,6 +2204,7 @@ export const QUESTIONS = {
         {
           "text": "朋友说你是外冷内热",
           "from": "maki",
+          "sec": "honoka",
           "vec": [
             -1,
             -0.5,
@@ -2172,6 +2217,7 @@ export const QUESTIONS = {
         {
           "text": "对热爱的事物毫无抵抗力",
           "from": "hanayo",
+          "sec": "eli",
           "vec": [
             -1,
             -0.5,
@@ -2184,6 +2230,7 @@ export const QUESTIONS = {
         {
           "text": "渴望被认可，也值得被认可",
           "from": "nico",
+          "sec": "kotori",
           "vec": [
             0.5,
             0.5,
@@ -2196,6 +2243,7 @@ export const QUESTIONS = {
         {
           "text": "是朋友里那个兜底的人",
           "from": "nozomi",
+          "sec": "umi",
           "vec": [
             0.5,
             -0.5,
@@ -2213,6 +2261,7 @@ export const QUESTIONS = {
         {
           "text": "相信船到桥头自然直",
           "from": "honoka",
+          "sec": "rin",
           "vec": [
             1,
             1,
@@ -2225,6 +2274,7 @@ export const QUESTIONS = {
         {
           "text": "习惯把责任扛在前面",
           "from": "eli",
+          "sec": "maki",
           "vec": [
             0,
             -0.5,
@@ -2237,6 +2287,7 @@ export const QUESTIONS = {
         {
           "text": "把心意缝进细节里",
           "from": "kotori",
+          "sec": "hanayo",
           "vec": [
             -0.5,
             -0.5,
@@ -2249,6 +2300,7 @@ export const QUESTIONS = {
         {
           "text": "看不惯半途而废",
           "from": "umi",
+          "sec": "nico",
           "vec": [
             -0.5,
             -0.5,
@@ -2266,6 +2318,7 @@ export const QUESTIONS = {
         {
           "text": "运动完才觉得活过来",
           "from": "rin",
+          "sec": "nozomi",
           "vec": [
             1,
             1,
@@ -2278,6 +2331,7 @@ export const QUESTIONS = {
         {
           "text": "宁可自己扛也不愿开口求助",
           "from": "maki",
+          "sec": "honoka",
           "vec": [
             -1,
             -0.5,
@@ -2290,6 +2344,7 @@ export const QUESTIONS = {
         {
           "text": "人多的场合会先找角落",
           "from": "hanayo",
+          "sec": "eli",
           "vec": [
             -1,
             -0.5,
@@ -2302,6 +2357,7 @@ export const QUESTIONS = {
         {
           "text": "人前活泼，人后偷偷用功",
           "from": "nico",
+          "sec": "kotori",
           "vec": [
             0.5,
             0.5,
@@ -2319,6 +2375,7 @@ export const QUESTIONS = {
         {
           "text": "午睡和灵感同等重要",
           "from": "nozomi",
+          "sec": "umi",
           "vec": [
             0.5,
             -0.5,
@@ -2331,6 +2388,7 @@ export const QUESTIONS = {
         {
           "text": "闲不下来，总想找点事做",
           "from": "honoka",
+          "sec": "rin",
           "vec": [
             1,
             1,
@@ -2343,6 +2401,7 @@ export const QUESTIONS = {
         {
           "text": "计划被打乱时会明显不安",
           "from": "eli",
+          "sec": "maki",
           "vec": [
             0,
             -0.5,
@@ -2355,6 +2414,7 @@ export const QUESTIONS = {
         {
           "text": "被推到人前时会先往后缩",
           "from": "kotori",
+          "sec": "hanayo",
           "vec": [
             -0.5,
             -0.5,
@@ -2372,6 +2432,7 @@ export const QUESTIONS = {
         {
           "text": "紧张时会把流程再背一遍",
           "from": "umi",
+          "sec": "nico",
           "vec": [
             -0.5,
             -0.5,
@@ -2384,6 +2445,7 @@ export const QUESTIONS = {
         {
           "text": "难过会直接哭出来，然后就好",
           "from": "rin",
+          "sec": "nozomi",
           "vec": [
             1,
             1,
@@ -2396,6 +2458,7 @@ export const QUESTIONS = {
         {
           "text": "对在意的事有一套不肯让步的标准",
           "from": "maki",
+          "sec": "honoka",
           "vec": [
             -1,
             -0.5,
@@ -2408,6 +2471,7 @@ export const QUESTIONS = {
         {
           "text": "谈到偶像就突然话多",
           "from": "hanayo",
+          "sec": "eli",
           "vec": [
             -1,
             -0.5,
@@ -2425,6 +2489,7 @@ export const QUESTIONS = {
         {
           "text": "被夸可爱会嘴上嫌弃心里开心",
           "from": "nico",
+          "sec": "kotori",
           "vec": [
             0.5,
             0.5,
@@ -2437,6 +2502,7 @@ export const QUESTIONS = {
         {
           "text": "用玩笑话讲真心",
           "from": "nozomi",
+          "sec": "umi",
           "vec": [
             0.5,
             -0.5,
@@ -2449,6 +2515,7 @@ export const QUESTIONS = {
         {
           "text": "把伙伴的情绪当成自己的事",
           "from": "honoka",
+          "sec": "rin",
           "vec": [
             1,
             1,
@@ -2461,6 +2528,7 @@ export const QUESTIONS = {
         {
           "text": "冷静是练出来的，不是天生的",
           "from": "eli",
+          "sec": "maki",
           "vec": [
             0,
             -0.5,
@@ -2478,6 +2546,7 @@ export const QUESTIONS = {
         {
           "text": "安静地观察，再慢慢靠近",
           "from": "kotori",
+          "sec": "hanayo",
           "vec": [
             -0.5,
             -0.5,
@@ -2490,6 +2559,7 @@ export const QUESTIONS = {
         {
           "text": "守着一套不肯让步的标准",
           "from": "umi",
+          "sec": "nico",
           "vec": [
             -0.5,
             -0.5,
@@ -2502,6 +2572,7 @@ export const QUESTIONS = {
         {
           "text": "跟着直觉跑，很少犹豫",
           "from": "rin",
+          "sec": "nozomi",
           "vec": [
             1,
             1,
@@ -2514,6 +2585,7 @@ export const QUESTIONS = {
         {
           "text": "独处时才觉得电量满格",
           "from": "maki",
+          "sec": "honoka",
           "vec": [
             -1,
             -0.5,
@@ -2531,6 +2603,7 @@ export const QUESTIONS = {
         {
           "text": "小小的仪式感能撑过一天",
           "from": "hanayo",
+          "sec": "eli",
           "vec": [
             -1,
             -0.5,
@@ -2543,6 +2616,7 @@ export const QUESTIONS = {
         {
           "text": "镜头感是私下练了无数遍的",
           "from": "nico",
+          "sec": "kotori",
           "vec": [
             0.5,
             0.5,
@@ -2555,6 +2629,7 @@ export const QUESTIONS = {
         {
           "text": "暗中把每个人的状态记在心里",
           "from": "nozomi",
+          "sec": "umi",
           "vec": [
             0.5,
             -0.5,
@@ -2567,6 +2642,7 @@ export const QUESTIONS = {
         {
           "text": "越热闹越来劲，人越多越放松",
           "from": "honoka",
+          "sec": "rin",
           "vec": [
             1,
             1,
@@ -2584,6 +2660,7 @@ export const QUESTIONS = {
         {
           "text": "把每件事拆成步骤才安心",
           "from": "eli",
+          "sec": "maki",
           "vec": [
             0,
             -0.5,
@@ -2596,6 +2673,7 @@ export const QUESTIONS = {
         {
           "text": "悄悄记住每个人的偏好",
           "from": "kotori",
+          "sec": "hanayo",
           "vec": [
             -0.5,
             -0.5,
@@ -2608,6 +2686,7 @@ export const QUESTIONS = {
         {
           "text": "把标准写在心里，不轻易降",
           "from": "umi",
+          "sec": "nico",
           "vec": [
             -0.5,
             -0.5,
@@ -2620,6 +2699,7 @@ export const QUESTIONS = {
         {
           "text": "身体比脑子先动起来",
           "from": "rin",
+          "sec": "nozomi",
           "vec": [
             1,
             1,
@@ -2637,6 +2717,7 @@ export const QUESTIONS = {
         {
           "text": "嘴上说无所谓，手上很诚实",
           "from": "maki",
+          "sec": "honoka",
           "vec": [
             -1,
             -0.5,
@@ -2649,6 +2730,7 @@ export const QUESTIONS = {
         {
           "text": "被夸会脸红到说不出话",
           "from": "hanayo",
+          "sec": "eli",
           "vec": [
             -1,
             -0.5,
@@ -2661,6 +2743,7 @@ export const QUESTIONS = {
         {
           "text": "嘴上嫌弃，行动上从不缺席",
           "from": "nico",
+          "sec": "kotori",
           "vec": [
             0.5,
             0.5,
@@ -2673,6 +2756,7 @@ export const QUESTIONS = {
         {
           "text": "把气氛拿捏得刚刚好",
           "from": "nozomi",
+          "sec": "umi",
           "vec": [
             0.5,
             -0.5,
@@ -2690,6 +2774,7 @@ export const QUESTIONS = {
         {
           "text": "被拜托就答应，很少说不",
           "from": "honoka",
+          "sec": "rin",
           "vec": [
             1,
             1,
@@ -2702,6 +2787,7 @@ export const QUESTIONS = {
         {
           "text": "被依赖时会先绷紧再顶上",
           "from": "eli",
+          "sec": "maki",
           "vec": [
             0,
             -0.5,
@@ -2714,6 +2800,7 @@ export const QUESTIONS = {
         {
           "text": "遇到争执先退一步再谈",
           "from": "kotori",
+          "sec": "hanayo",
           "vec": [
             -0.5,
             -0.5,
@@ -2726,6 +2813,7 @@ export const QUESTIONS = {
         {
           "text": "被夸奖会不好意思地低头",
           "from": "umi",
+          "sec": "nico",
           "vec": [
             -0.5,
             -0.5,
@@ -2743,6 +2831,7 @@ export const QUESTIONS = {
         {
           "text": "被冷落会直接问「怎么了」",
           "from": "rin",
+          "sec": "nozomi",
           "vec": [
             1,
             1,
@@ -2755,6 +2844,7 @@ export const QUESTIONS = {
         {
           "text": "安静时脑子里全是旋律",
           "from": "maki",
+          "sec": "honoka",
           "vec": [
             -1,
             -0.5,
@@ -2767,6 +2857,7 @@ export const QUESTIONS = {
         {
           "text": "把喜欢的东西整理得整整齐齐",
           "from": "hanayo",
+          "sec": "eli",
           "vec": [
             -1,
             -0.5,
@@ -2779,6 +2870,7 @@ export const QUESTIONS = {
         {
           "text": "越被小看越想证明",
           "from": "nico",
+          "sec": "kotori",
           "vec": [
             0.5,
             0.5,
@@ -2798,6 +2890,7 @@ export const QUESTIONS = {
         {
           "text": "想到就喊出来，先做再说",
           "from": "chika",
+          "sec": "you",
           "vec": [
             1,
             1,
@@ -2810,6 +2903,7 @@ export const QUESTIONS = {
         {
           "text": "表面冷静，内心其实容易慌",
           "from": "riko",
+          "sec": "ruby",
           "vec": [
             -0.5,
             -0.5,
@@ -2822,6 +2916,7 @@ export const QUESTIONS = {
         {
           "text": "做得多说得少",
           "from": "kanan",
+          "sec": "mari",
           "vec": [
             0,
             0.5,
@@ -2834,6 +2929,7 @@ export const QUESTIONS = {
         {
           "text": "先把规矩立起来再谈感情",
           "from": "dia",
+          "sec": "yoshiko",
           "vec": [
             -0.5,
             -0.5,
@@ -2851,6 +2947,7 @@ export const QUESTIONS = {
         {
           "text": "行动力强，想到就出发",
           "from": "you",
+          "sec": "hanamaru",
           "vec": [
             1,
             1,
@@ -2863,6 +2960,7 @@ export const QUESTIONS = {
         {
           "text": "容易紧张，习惯先道歉",
           "from": "ruby",
+          "sec": "chika",
           "vec": [
             -1,
             -0.5,
@@ -2875,6 +2973,7 @@ export const QUESTIONS = {
         {
           "text": "直接热烈，不绕弯子",
           "from": "mari",
+          "sec": "riko",
           "vec": [
             1,
             0.5,
@@ -2887,6 +2986,7 @@ export const QUESTIONS = {
         {
           "text": "用设定和玩笑保护自己",
           "from": "yoshiko",
+          "sec": "kanan",
           "vec": [
             -1,
             0,
@@ -2904,6 +3004,7 @@ export const QUESTIONS = {
         {
           "text": "安静，但心里有自己的小算盘",
           "from": "hanamaru",
+          "sec": "dia",
           "vec": [
             -0.5,
             -0.5,
@@ -2916,6 +3017,7 @@ export const QUESTIONS = {
         {
           "text": "天生能把人聚到一起",
           "from": "chika",
+          "sec": "you",
           "vec": [
             1,
             1,
@@ -2928,6 +3030,7 @@ export const QUESTIONS = {
         {
           "text": "更习惯用作品而不是语言表达自己",
           "from": "riko",
+          "sec": "ruby",
           "vec": [
             -0.5,
             -0.5,
@@ -2940,6 +3043,7 @@ export const QUESTIONS = {
         {
           "text": "是大家默认可靠的那个",
           "from": "kanan",
+          "sec": "mari",
           "vec": [
             0,
             0.5,
@@ -2957,6 +3061,7 @@ export const QUESTIONS = {
         {
           "text": "对自己和身边人都要求高",
           "from": "dia",
+          "sec": "yoshiko",
           "vec": [
             -0.5,
             -0.5,
@@ -2969,6 +3074,7 @@ export const QUESTIONS = {
         {
           "text": "爽朗，但也会吃醋",
           "from": "you",
+          "sec": "hanamaru",
           "vec": [
             1,
             1,
@@ -2981,6 +3087,7 @@ export const QUESTIONS = {
         {
           "text": "羡慕别人的大胆",
           "from": "ruby",
+          "sec": "chika",
           "vec": [
             -1,
             -0.5,
@@ -2993,6 +3100,7 @@ export const QUESTIONS = {
         {
           "text": "舍得放手去追想要的",
           "from": "mari",
+          "sec": "riko",
           "vec": [
             1,
             0.5,
@@ -3010,6 +3118,7 @@ export const QUESTIONS = {
         {
           "text": "怕被看穿，又希望被理解",
           "from": "yoshiko",
+          "sec": "kanan",
           "vec": [
             -1,
             0,
@@ -3022,6 +3131,7 @@ export const QUESTIONS = {
         {
           "text": "用文字和书理解世界",
           "from": "hanamaru",
+          "sec": "dia",
           "vec": [
             -0.5,
             -0.5,
@@ -3034,6 +3144,7 @@ export const QUESTIONS = {
         {
           "text": "把别人的梦想也当回事",
           "from": "chika",
+          "sec": "you",
           "vec": [
             1,
             1,
@@ -3046,6 +3157,7 @@ export const QUESTIONS = {
         {
           "text": "对新环境需要时间适应",
           "from": "riko",
+          "sec": "ruby",
           "vec": [
             -0.5,
             -0.5,
@@ -3063,6 +3175,7 @@ export const QUESTIONS = {
         {
           "text": "也有害怕的东西，只是不退",
           "from": "kanan",
+          "sec": "mari",
           "vec": [
             0,
             0.5,
@@ -3075,6 +3188,7 @@ export const QUESTIONS = {
         {
           "text": "严格其实是一种保护",
           "from": "dia",
+          "sec": "yoshiko",
           "vec": [
             -0.5,
             -0.5,
@@ -3087,6 +3201,7 @@ export const QUESTIONS = {
         {
           "text": "对热爱的事有使不完的劲",
           "from": "you",
+          "sec": "hanamaru",
           "vec": [
             1,
             1,
@@ -3099,6 +3214,7 @@ export const QUESTIONS = {
         {
           "text": "依赖信任的人，但也在慢慢独立",
           "from": "ruby",
+          "sec": "chika",
           "vec": [
             -1,
             -0.5,
@@ -3116,6 +3232,7 @@ export const QUESTIONS = {
         {
           "text": "看着随便，其实看得很清",
           "from": "mari",
+          "sec": "riko",
           "vec": [
             1,
             0.5,
@@ -3128,6 +3245,7 @@ export const QUESTIONS = {
         {
           "text": "嘴上不承认，身体很诚实",
           "from": "yoshiko",
+          "sec": "kanan",
           "vec": [
             -1,
             0,
@@ -3140,6 +3258,7 @@ export const QUESTIONS = {
         {
           "text": "看着朴素，其实很有想法",
           "from": "hanamaru",
+          "sec": "dia",
           "vec": [
             -0.5,
             -0.5,
@@ -3152,6 +3271,7 @@ export const QUESTIONS = {
         {
           "text": "认定了就不轻易放手",
           "from": "chika",
+          "sec": "you",
           "vec": [
             1,
             1,
@@ -3169,6 +3289,7 @@ export const QUESTIONS = {
         {
           "text": "认真起来会忘了照顾自己",
           "from": "riko",
+          "sec": "ruby",
           "vec": [
             -0.5,
             -0.5,
@@ -3181,6 +3302,7 @@ export const QUESTIONS = {
         {
           "text": "习惯把照顾别人当成日常",
           "from": "kanan",
+          "sec": "mari",
           "vec": [
             0,
             0.5,
@@ -3193,6 +3315,7 @@ export const QUESTIONS = {
         {
           "text": "在在意的人面前会破功",
           "from": "dia",
+          "sec": "yoshiko",
           "vec": [
             -0.5,
             -0.5,
@@ -3205,6 +3328,7 @@ export const QUESTIONS = {
         {
           "text": "嘴上大大咧咧，心里有数",
           "from": "you",
+          "sec": "hanamaru",
           "vec": [
             1,
             1,
@@ -3222,6 +3346,7 @@ export const QUESTIONS = {
         {
           "text": "一旦决定了就很稳",
           "from": "ruby",
+          "sec": "chika",
           "vec": [
             -1,
             -0.5,
@@ -3234,6 +3359,7 @@ export const QUESTIONS = {
         {
           "text": "擅长把日子过得漂亮",
           "from": "mari",
+          "sec": "riko",
           "vec": [
             1,
             0.5,
@@ -3246,6 +3372,7 @@ export const QUESTIONS = {
         {
           "text": "中二的外表下是认真的心",
           "from": "yoshiko",
+          "sec": "kanan",
           "vec": [
             -1,
             0,
@@ -3258,6 +3385,7 @@ export const QUESTIONS = {
         {
           "text": "对喜欢的事会下苦功",
           "from": "hanamaru",
+          "sec": "dia",
           "vec": [
             -0.5,
             -0.5,
@@ -3275,6 +3403,7 @@ export const QUESTIONS = {
         {
           "text": "海风一吹就觉得又能行了",
           "from": "chika",
+          "sec": "you",
           "vec": [
             1,
             1,
@@ -3287,6 +3416,7 @@ export const QUESTIONS = {
         {
           "text": "人前镇定，人后反复复盘",
           "from": "riko",
+          "sec": "ruby",
           "vec": [
             -0.5,
             -0.5,
@@ -3299,6 +3429,7 @@ export const QUESTIONS = {
         {
           "text": "动手之前先把风险想好",
           "from": "kanan",
+          "sec": "mari",
           "vec": [
             0,
             0.5,
@@ -3311,6 +3442,7 @@ export const QUESTIONS = {
         {
           "text": "看不惯散漫和敷衍",
           "from": "dia",
+          "sec": "yoshiko",
           "vec": [
             -0.5,
             -0.5,
@@ -3328,6 +3460,7 @@ export const QUESTIONS = {
         {
           "text": "说干就干，很少内耗",
           "from": "you",
+          "sec": "hanamaru",
           "vec": [
             1,
             1,
@@ -3340,6 +3473,7 @@ export const QUESTIONS = {
         {
           "text": "陌生场合会先找熟悉的身影",
           "from": "ruby",
+          "sec": "chika",
           "vec": [
             -1,
             -0.5,
@@ -3352,6 +3486,7 @@ export const QUESTIONS = {
         {
           "text": "喜欢就大声说喜欢",
           "from": "mari",
+          "sec": "riko",
           "vec": [
             1,
             0.5,
@@ -3364,6 +3499,7 @@ export const QUESTIONS = {
         {
           "text": "人前摆姿态，人后偷偷在意",
           "from": "yoshiko",
+          "sec": "kanan",
           "vec": [
             -1,
             0,
@@ -3381,6 +3517,7 @@ export const QUESTIONS = {
         {
           "text": "说话慢，却句句有分量",
           "from": "hanamaru",
+          "sec": "dia",
           "vec": [
             -0.5,
             -0.5,
@@ -3393,6 +3530,7 @@ export const QUESTIONS = {
         {
           "text": "难过也很快被下一件事冲走",
           "from": "chika",
+          "sec": "you",
           "vec": [
             1,
             1,
@@ -3405,6 +3543,7 @@ export const QUESTIONS = {
         {
           "text": "琴声比话语更能代表你",
           "from": "riko",
+          "sec": "ruby",
           "vec": [
             -0.5,
             -0.5,
@@ -3417,6 +3556,7 @@ export const QUESTIONS = {
         {
           "text": "被依赖时从不推辞",
           "from": "kanan",
+          "sec": "mari",
           "vec": [
             0,
             0.5,
@@ -3434,6 +3574,7 @@ export const QUESTIONS = {
         {
           "text": "责任来了就接住，不抱怨",
           "from": "dia",
+          "sec": "yoshiko",
           "vec": [
             -0.5,
             -0.5,
@@ -3446,6 +3587,7 @@ export const QUESTIONS = {
         {
           "text": "伙伴低落时第一个察觉",
           "from": "you",
+          "sec": "hanamaru",
           "vec": [
             1,
             1,
@@ -3458,6 +3600,7 @@ export const QUESTIONS = {
         {
           "text": "小声说话，却把喜好记得很牢",
           "from": "ruby",
+          "sec": "chika",
           "vec": [
             -1,
             -0.5,
@@ -3470,6 +3613,7 @@ export const QUESTIONS = {
         {
           "text": "新鲜事物总想第一个试",
           "from": "mari",
+          "sec": "riko",
           "vec": [
             1,
             0.5,
@@ -3487,6 +3631,7 @@ export const QUESTIONS = {
         {
           "text": "被叫本名会瞬间破功",
           "from": "yoshiko",
+          "sec": "kanan",
           "vec": [
             -1,
             0,
@@ -3499,6 +3644,7 @@ export const QUESTIONS = {
         {
           "text": "传统和老物件让你安心",
           "from": "hanamaru",
+          "sec": "dia",
           "vec": [
             -0.5,
             -0.5,
@@ -3511,6 +3657,7 @@ export const QUESTIONS = {
         {
           "text": "总想把「喜欢」传给更多人",
           "from": "chika",
+          "sec": "you",
           "vec": [
             1,
             1,
@@ -3523,6 +3670,7 @@ export const QUESTIONS = {
         {
           "text": "容易把小事在心里放大",
           "from": "riko",
+          "sec": "ruby",
           "vec": [
             -0.5,
             -0.5,
@@ -3540,6 +3688,7 @@ export const QUESTIONS = {
         {
           "text": "海边的生活让你踏实",
           "from": "kanan",
+          "sec": "mari",
           "vec": [
             0,
             0.5,
@@ -3552,6 +3701,7 @@ export const QUESTIONS = {
         {
           "text": "把「必须做好」刻进习惯",
           "from": "dia",
+          "sec": "yoshiko",
           "vec": [
             -0.5,
             -0.5,
@@ -3564,6 +3714,7 @@ export const QUESTIONS = {
         {
           "text": "闲不住，总想找事练",
           "from": "you",
+          "sec": "hanamaru",
           "vec": [
             1,
             1,
@@ -3576,6 +3727,7 @@ export const QUESTIONS = {
         {
           "text": "被鼓励时会红着脸努力",
           "from": "ruby",
+          "sec": "chika",
           "vec": [
             -1,
             -0.5,
@@ -3593,6 +3745,7 @@ export const QUESTIONS = {
         {
           "text": "把「开心」当成重要决定",
           "from": "mari",
+          "sec": "riko",
           "vec": [
             1,
             0.5,
@@ -3605,6 +3758,7 @@ export const QUESTIONS = {
         {
           "text": "把「堕天使」当成安全的壳",
           "from": "yoshiko",
+          "sec": "kanan",
           "vec": [
             -1,
             0,
@@ -3617,6 +3771,7 @@ export const QUESTIONS = {
         {
           "text": "把想法先写下来再说出口",
           "from": "hanamaru",
+          "sec": "dia",
           "vec": [
             -0.5,
             -0.5,
@@ -3629,6 +3784,7 @@ export const QUESTIONS = {
         {
           "text": "人群里最先开口的那个",
           "from": "chika",
+          "sec": "you",
           "vec": [
             1,
             1,
@@ -3646,6 +3802,7 @@ export const QUESTIONS = {
         {
           "text": "把情绪写进旋律里",
           "from": "riko",
+          "sec": "ruby",
           "vec": [
             -0.5,
             -0.5,
@@ -3658,6 +3815,7 @@ export const QUESTIONS = {
         {
           "text": "把担心藏在行动后面",
           "from": "kanan",
+          "sec": "mari",
           "vec": [
             0,
             0.5,
@@ -3670,6 +3828,7 @@ export const QUESTIONS = {
         {
           "text": "规则之内才有自由",
           "from": "dia",
+          "sec": "yoshiko",
           "vec": [
             -0.5,
             -0.5,
@@ -3682,6 +3841,7 @@ export const QUESTIONS = {
         {
           "text": "把力气用在当下",
           "from": "you",
+          "sec": "hanamaru",
           "vec": [
             1,
             1,
@@ -3699,6 +3859,7 @@ export const QUESTIONS = {
         {
           "text": "把不安藏在低头里",
           "from": "ruby",
+          "sec": "chika",
           "vec": [
             -1,
             -0.5,
@@ -3711,6 +3872,7 @@ export const QUESTIONS = {
         {
           "text": "被规矩困住就想跳出去",
           "from": "mari",
+          "sec": "riko",
           "vec": [
             1,
             0.5,
@@ -3723,6 +3885,7 @@ export const QUESTIONS = {
         {
           "text": "认真时反而会结巴",
           "from": "yoshiko",
+          "sec": "kanan",
           "vec": [
             -1,
             0,
@@ -3735,6 +3898,7 @@ export const QUESTIONS = {
         {
           "text": "被书页和旧物包围最安心",
           "from": "hanamaru",
+          "sec": "dia",
           "vec": [
             -0.5,
             -0.5,
@@ -3752,6 +3916,7 @@ export const QUESTIONS = {
         {
           "text": "被期待时会更有干劲",
           "from": "chika",
+          "sec": "you",
           "vec": [
             1,
             1,
@@ -3764,6 +3929,7 @@ export const QUESTIONS = {
         {
           "text": "安静时反而想得最多",
           "from": "riko",
+          "sec": "ruby",
           "vec": [
             -0.5,
             -0.5,
@@ -3776,6 +3942,7 @@ export const QUESTIONS = {
         {
           "text": "沉默时也在照顾全场",
           "from": "kanan",
+          "sec": "mari",
           "vec": [
             0,
             0.5,
@@ -3788,6 +3955,7 @@ export const QUESTIONS = {
         {
           "text": "被打破计划会明显不悦",
           "from": "dia",
+          "sec": "yoshiko",
           "vec": [
             -0.5,
             -0.5,
@@ -3805,6 +3973,7 @@ export const QUESTIONS = {
         {
           "text": "被伙伴需要时最来劲",
           "from": "you",
+          "sec": "hanamaru",
           "vec": [
             1,
             1,
@@ -3817,6 +3986,7 @@ export const QUESTIONS = {
         {
           "text": "熟悉之后话会变多",
           "from": "ruby",
+          "sec": "chika",
           "vec": [
             -1,
             -0.5,
@@ -3829,6 +3999,7 @@ export const QUESTIONS = {
         {
           "text": "越自由越有灵感",
           "from": "mari",
+          "sec": "riko",
           "vec": [
             1,
             0.5,
@@ -3841,6 +4012,7 @@ export const QUESTIONS = {
         {
           "text": "越紧张越要装淡定",
           "from": "yoshiko",
+          "sec": "kanan",
           "vec": [
             -1,
             0,
@@ -3860,6 +4032,7 @@ export const QUESTIONS = {
         {
           "text": "温柔体贴，认真努力",
           "from": "ayumu",
+          "sec": "ai",
           "vec": [
             -0.5,
             -0.5,
@@ -3872,6 +4045,7 @@ export const QUESTIONS = {
         {
           "text": "最爱可爱事物",
           "from": "kasumi",
+          "sec": "kanata",
           "vec": [
             0.5,
             0.5,
@@ -3884,6 +4058,7 @@ export const QUESTIONS = {
         {
           "text": "认真可靠，温柔谦逊",
           "from": "shizuku",
+          "sec": "setsuna",
           "vec": [
             -0.5,
             -0.5,
@@ -3896,6 +4071,7 @@ export const QUESTIONS = {
         {
           "text": "沉稳不惊，成熟自信",
           "from": "karin",
+          "sec": "emma",
           "vec": [
             0.5,
             0,
@@ -3913,6 +4089,7 @@ export const QUESTIONS = {
         {
           "text": "开朗爱笑",
           "from": "ai",
+          "sec": "rina",
           "vec": [
             1,
             1,
@@ -3925,6 +4102,7 @@ export const QUESTIONS = {
         {
           "text": "慵懒爱睡",
           "from": "kanata",
+          "sec": "shioriko",
           "vec": [
             -0.5,
             -0.5,
@@ -3937,6 +4115,7 @@ export const QUESTIONS = {
         {
           "text": "对喜欢的事率直",
           "from": "setsuna",
+          "sec": "mia",
           "vec": [
             0.5,
             1,
@@ -3949,6 +4128,7 @@ export const QUESTIONS = {
         {
           "text": "稳重文静",
           "from": "emma",
+          "sec": "lanzhu",
           "vec": [
             -0.5,
             -0.5,
@@ -3966,6 +4146,7 @@ export const QUESTIONS = {
         {
           "text": "不擅表情达意",
           "from": "rina",
+          "sec": "ayumu",
           "vec": [
             -1,
             -0.5,
@@ -3978,6 +4159,7 @@ export const QUESTIONS = {
         {
           "text": "冷静沉着",
           "from": "shioriko",
+          "sec": "kasumi",
           "vec": [
             -0.5,
             -0.5,
@@ -3990,6 +4172,7 @@ export const QUESTIONS = {
         {
           "text": "有才华却不自信",
           "from": "mia",
+          "sec": "shizuku",
           "vec": [
             -1,
             0,
@@ -4002,6 +4185,7 @@ export const QUESTIONS = {
         {
           "text": "自信满满",
           "from": "lanzhu",
+          "sec": "karin",
           "vec": [
             1,
             1,
@@ -4019,6 +4203,7 @@ export const QUESTIONS = {
         {
           "text": "一步步朝梦想前进",
           "from": "ayumu",
+          "sec": "ai",
           "vec": [
             -0.5,
             -0.5,
@@ -4031,6 +4216,7 @@ export const QUESTIONS = {
         {
           "text": "骨子里不服输",
           "from": "kasumi",
+          "sec": "kanata",
           "vec": [
             0.5,
             0.5,
@@ -4043,6 +4229,7 @@ export const QUESTIONS = {
         {
           "text": "热爱表演",
           "from": "shizuku",
+          "sec": "setsuna",
           "vec": [
             -0.5,
             -0.5,
@@ -4055,6 +4242,7 @@ export const QUESTIONS = {
         {
           "text": "意外地纯真",
           "from": "karin",
+          "sec": "emma",
           "vec": [
             0.5,
             0,
@@ -4072,6 +4260,7 @@ export const QUESTIONS = {
         {
           "text": "被挑战就燃起斗志",
           "from": "ai",
+          "sec": "rina",
           "vec": [
             1,
             1,
@@ -4084,6 +4273,7 @@ export const QUESTIONS = {
         {
           "text": "疼爱妹妹",
           "from": "kanata",
+          "sec": "shioriko",
           "vec": [
             -0.5,
             -0.5,
@@ -4096,6 +4286,7 @@ export const QUESTIONS = {
         {
           "text": "充满热情",
           "from": "setsuna",
+          "sec": "mia",
           "vec": [
             0.5,
             1,
@@ -4108,6 +4299,7 @@ export const QUESTIONS = {
         {
           "text": "热爱大自然",
           "from": "emma",
+          "sec": "lanzhu",
           "vec": [
             -0.5,
             -0.5,
@@ -4125,6 +4317,7 @@ export const QUESTIONS = {
         {
           "text": "内心细腻",
           "from": "rina",
+          "sec": "ayumu",
           "vec": [
             -1,
             -0.5,
@@ -4137,6 +4330,7 @@ export const QUESTIONS = {
         {
           "text": "严于律己",
           "from": "shioriko",
+          "sec": "kasumi",
           "vec": [
             -0.5,
             -0.5,
@@ -4149,6 +4343,7 @@ export const QUESTIONS = {
         {
           "text": "说话直率",
           "from": "mia",
+          "sec": "shizuku",
           "vec": [
             -1,
             0,
@@ -4161,6 +4356,7 @@ export const QUESTIONS = {
         {
           "text": "想到就去做",
           "from": "lanzhu",
+          "sec": "karin",
           "vec": [
             1,
             1,
@@ -4178,6 +4374,7 @@ export const QUESTIONS = {
         {
           "text": "很在意重要的人",
           "from": "ayumu",
+          "sec": "ai",
           "vec": [
             -0.5,
             -0.5,
@@ -4190,6 +4387,7 @@ export const QUESTIONS = {
         {
           "text": "爱耍小聪明恶作剧",
           "from": "kasumi",
+          "sec": "kanata",
           "vec": [
             0.5,
             0.5,
@@ -4202,6 +4400,7 @@ export const QUESTIONS = {
         {
           "text": "想让观众露出笑容",
           "from": "shizuku",
+          "sec": "setsuna",
           "vec": [
             -0.5,
             -0.5,
@@ -4214,6 +4413,7 @@ export const QUESTIONS = {
         {
           "text": "爱捉弄后辈",
           "from": "karin",
+          "sec": "emma",
           "vec": [
             0.5,
             0,
@@ -4231,6 +4431,7 @@ export const QUESTIONS = {
         {
           "text": "友善照顾人",
           "from": "ai",
+          "sec": "rina",
           "vec": [
             1,
             1,
@@ -4243,6 +4444,7 @@ export const QUESTIONS = {
         {
           "text": "温和随性",
           "from": "kanata",
+          "sec": "shioriko",
           "vec": [
             -0.5,
             -0.5,
@@ -4255,6 +4457,7 @@ export const QUESTIONS = {
         {
           "text": "认真有担当",
           "from": "setsuna",
+          "sec": "mia",
           "vec": [
             0.5,
             1,
@@ -4267,6 +4470,7 @@ export const QUESTIONS = {
         {
           "text": "治愈身边人",
           "from": "emma",
+          "sec": "lanzhu",
           "vec": [
             -0.5,
             -0.5,
@@ -4284,6 +4488,7 @@ export const QUESTIONS = {
         {
           "text": "努力想办法传达心情",
           "from": "rina",
+          "sec": "ayumu",
           "vec": [
             -1,
             -0.5,
@@ -4296,6 +4501,7 @@ export const QUESTIONS = {
         {
           "text": "不懂变通",
           "from": "shioriko",
+          "sec": "kasumi",
           "vec": [
             -0.5,
             -0.5,
@@ -4308,6 +4514,7 @@ export const QUESTIONS = {
         {
           "text": "其实害羞",
           "from": "mia",
+          "sec": "shizuku",
           "vec": [
             -1,
             0,
@@ -4320,6 +4527,7 @@ export const QUESTIONS = {
         {
           "text": "热烈直率",
           "from": "lanzhu",
+          "sec": "karin",
           "vec": [
             1,
             1,
@@ -4337,6 +4545,7 @@ export const QUESTIONS = {
         {
           "text": "会把别人的需求放在前面",
           "from": "ayumu",
+          "sec": "ai",
           "vec": [
             -0.5,
             -0.5,
@@ -4349,6 +4558,7 @@ export const QUESTIONS = {
         {
           "text": "内心是好孩子",
           "from": "kasumi",
+          "sec": "kanata",
           "vec": [
             0.5,
             0.5,
@@ -4361,6 +4571,7 @@ export const QUESTIONS = {
         {
           "text": "台上台下反差很大",
           "from": "shizuku",
+          "sec": "setsuna",
           "vec": [
             -0.5,
             -0.5,
@@ -4373,6 +4584,7 @@ export const QUESTIONS = {
         {
           "text": "看得清场面，也控得住场",
           "from": "karin",
+          "sec": "emma",
           "vec": [
             0.5,
             0,
@@ -4390,6 +4602,7 @@ export const QUESTIONS = {
         {
           "text": "乐于尝试新事物",
           "from": "ai",
+          "sec": "rina",
           "vec": [
             1,
             1,
@@ -4402,6 +4615,7 @@ export const QUESTIONS = {
         {
           "text": "关键时刻很可靠",
           "from": "kanata",
+          "sec": "shioriko",
           "vec": [
             -0.5,
             -0.5,
@@ -4414,6 +4628,7 @@ export const QUESTIONS = {
         {
           "text": "想把喜欢传遍世界",
           "from": "setsuna",
+          "sec": "mia",
           "vec": [
             0.5,
             1,
@@ -4426,6 +4641,7 @@ export const QUESTIONS = {
         {
           "text": "我行我素",
           "from": "emma",
+          "sec": "lanzhu",
           "vec": [
             -0.5,
             -0.5,
@@ -4443,6 +4659,7 @@ export const QUESTIONS = {
         {
           "text": "渴望与大家相连",
           "from": "rina",
+          "sec": "ayumu",
           "vec": [
             -1,
             -0.5,
@@ -4455,6 +4672,7 @@ export const QUESTIONS = {
         {
           "text": "真心希望他人幸福",
           "from": "shioriko",
+          "sec": "kasumi",
           "vec": [
             -0.5,
             -0.5,
@@ -4467,6 +4685,7 @@ export const QUESTIONS = {
         {
           "text": "为喜欢的事鼓起勇气",
           "from": "mia",
+          "sec": "shizuku",
           "vec": [
             -1,
             0,
@@ -4479,6 +4698,7 @@ export const QUESTIONS = {
         {
           "text": "偶尔任性",
           "from": "lanzhu",
+          "sec": "karin",
           "vec": [
             1,
             1,
@@ -4496,6 +4716,7 @@ export const QUESTIONS = {
         {
           "text": "紧张时靠反复练习安定",
           "from": "ayumu",
+          "sec": "ai",
           "vec": [
             -0.5,
             -0.5,
@@ -4508,6 +4729,7 @@ export const QUESTIONS = {
         {
           "text": "被说幼稚会炸毛",
           "from": "kasumi",
+          "sec": "kanata",
           "vec": [
             0.5,
             0.5,
@@ -4520,6 +4742,7 @@ export const QUESTIONS = {
         {
           "text": "习惯把紧张藏进排练",
           "from": "shizuku",
+          "sec": "setsuna",
           "vec": [
             -0.5,
             -0.5,
@@ -4532,6 +4755,7 @@ export const QUESTIONS = {
         {
           "text": "不轻易表态，一表态就准",
           "from": "karin",
+          "sec": "emma",
           "vec": [
             0.5,
             0,
@@ -4549,6 +4773,7 @@ export const QUESTIONS = {
         {
           "text": "冷场时主动抛梗",
           "from": "ai",
+          "sec": "rina",
           "vec": [
             1,
             1,
@@ -4561,6 +4786,7 @@ export const QUESTIONS = {
         {
           "text": "能躺着就不坐着",
           "from": "kanata",
+          "sec": "shioriko",
           "vec": [
             -0.5,
             -0.5,
@@ -4573,6 +4799,7 @@ export const QUESTIONS = {
         {
           "text": "谈到热爱就眼睛发亮",
           "from": "setsuna",
+          "sec": "mia",
           "vec": [
             0.5,
             1,
@@ -4585,6 +4812,7 @@ export const QUESTIONS = {
         {
           "text": "节奏慢，但从不慌乱",
           "from": "emma",
+          "sec": "lanzhu",
           "vec": [
             -0.5,
             -0.5,
@@ -4602,6 +4830,7 @@ export const QUESTIONS = {
         {
           "text": "借助小道具传达说不出口的话",
           "from": "rina",
+          "sec": "ayumu",
           "vec": [
             -1,
             -0.5,
@@ -4614,6 +4843,7 @@ export const QUESTIONS = {
         {
           "text": "先讲道理，再谈感情",
           "from": "shioriko",
+          "sec": "kasumi",
           "vec": [
             -0.5,
             -0.5,
@@ -4626,6 +4856,7 @@ export const QUESTIONS = {
         {
           "text": "嘴上嫌弃，手上却帮忙",
           "from": "mia",
+          "sec": "shizuku",
           "vec": [
             -1,
             0,
@@ -4638,6 +4869,7 @@ export const QUESTIONS = {
         {
           "text": "要什么就大声争取",
           "from": "lanzhu",
+          "sec": "karin",
           "vec": [
             1,
             1,
@@ -4655,6 +4887,7 @@ export const QUESTIONS = {
         {
           "text": "不擅争抢，但从不放弃",
           "from": "ayumu",
+          "sec": "ai",
           "vec": [
             -0.5,
             -0.5,
@@ -4667,6 +4900,7 @@ export const QUESTIONS = {
         {
           "text": "争强好胜写在脸上",
           "from": "kasumi",
+          "sec": "kanata",
           "vec": [
             0.5,
             0.5,
@@ -4679,6 +4913,7 @@ export const QUESTIONS = {
         {
           "text": "对角色比对自己更上心",
           "from": "shizuku",
+          "sec": "setsuna",
           "vec": [
             -0.5,
             -0.5,
@@ -4691,6 +4926,7 @@ export const QUESTIONS = {
         {
           "text": "被戳破少女心会嘴硬",
           "from": "karin",
+          "sec": "emma",
           "vec": [
             0.5,
             0,
@@ -4708,6 +4944,7 @@ export const QUESTIONS = {
         {
           "text": "越难越觉得有意思",
           "from": "ai",
+          "sec": "rina",
           "vec": [
             1,
             1,
@@ -4720,6 +4957,7 @@ export const QUESTIONS = {
         {
           "text": "看似散漫，实则心里有数",
           "from": "kanata",
+          "sec": "shioriko",
           "vec": [
             -0.5,
             -0.5,
@@ -4732,6 +4970,7 @@ export const QUESTIONS = {
         {
           "text": "认定的事九头牛拉不回",
           "from": "setsuna",
+          "sec": "mia",
           "vec": [
             0.5,
             1,
@@ -4744,6 +4983,7 @@ export const QUESTIONS = {
         {
           "text": "用歌声和自然安抚人心",
           "from": "emma",
+          "sec": "lanzhu",
           "vec": [
             -0.5,
             -0.5,
@@ -4761,6 +5001,7 @@ export const QUESTIONS = {
         {
           "text": "面无表情，心里翻涌",
           "from": "rina",
+          "sec": "ayumu",
           "vec": [
             -1,
             -0.5,
@@ -4773,6 +5014,7 @@ export const QUESTIONS = {
         {
           "text": "看不惯散漫，也逼自己紧绷",
           "from": "shioriko",
+          "sec": "kasumi",
           "vec": [
             -0.5,
             -0.5,
@@ -4785,6 +5027,7 @@ export const QUESTIONS = {
         {
           "text": "被夸会先怀疑再开心",
           "from": "mia",
+          "sec": "shizuku",
           "vec": [
             -1,
             0,
@@ -4797,6 +5040,7 @@ export const QUESTIONS = {
         {
           "text": "舞台越大越兴奋",
           "from": "lanzhu",
+          "sec": "karin",
           "vec": [
             1,
             1,
@@ -4814,6 +5058,7 @@ export const QUESTIONS = {
         {
           "text": "把「想和你们在一起」藏在努力里",
           "from": "ayumu",
+          "sec": "ai",
           "vec": [
             -0.5,
             -0.5,
@@ -4826,6 +5071,7 @@ export const QUESTIONS = {
         {
           "text": "偷偷希望被当成大人",
           "from": "kasumi",
+          "sec": "kanata",
           "vec": [
             0.5,
             0.5,
@@ -4838,6 +5084,7 @@ export const QUESTIONS = {
         {
           "text": "安静地打磨每一个细节",
           "from": "shizuku",
+          "sec": "setsuna",
           "vec": [
             -0.5,
             -0.5,
@@ -4850,6 +5097,7 @@ export const QUESTIONS = {
         {
           "text": "把可靠当成默认状态",
           "from": "karin",
+          "sec": "emma",
           "vec": [
             0.5,
             0,
@@ -4867,6 +5115,7 @@ export const QUESTIONS = {
         {
           "text": "把快乐传染给全场",
           "from": "ai",
+          "sec": "rina",
           "vec": [
             1,
             1,
@@ -4879,6 +5128,7 @@ export const QUESTIONS = {
         {
           "text": "把精力留给真正重要的事",
           "from": "kanata",
+          "sec": "shioriko",
           "vec": [
             -0.5,
             -0.5,
@@ -4891,6 +5141,7 @@ export const QUESTIONS = {
         {
           "text": "把「喜欢」大声喊出来",
           "from": "setsuna",
+          "sec": "mia",
           "vec": [
             0.5,
             1,
@@ -4903,6 +5154,7 @@ export const QUESTIONS = {
         {
           "text": "把日子过成舒缓的调子",
           "from": "emma",
+          "sec": "lanzhu",
           "vec": [
             -0.5,
             -0.5,
@@ -4910,6 +5162,234 @@ export const QUESTIONS = {
             -0.5,
             1,
             -0.5
+          ]
+        }
+      ]
+    },
+    {
+      "q": "你更愿意被记住的是：",
+      "opts": [
+        {
+          "text": "把「想被理解」写进小道具",
+          "from": "rina",
+          "sec": "ayumu",
+          "vec": [
+            -1,
+            -0.5,
+            1,
+            -1,
+            -0.5,
+            0
+          ]
+        },
+        {
+          "text": "把「正确」看得比「舒服」重",
+          "from": "shioriko",
+          "sec": "kasumi",
+          "vec": [
+            -0.5,
+            -0.5,
+            -1,
+            0.5,
+            1,
+            -1
+          ]
+        },
+        {
+          "text": "把不安藏在直率后面",
+          "from": "mia",
+          "sec": "shizuku",
+          "vec": [
+            -1,
+            0,
+            -1,
+            0,
+            -0.5,
+            1
+          ]
+        },
+        {
+          "text": "把「我值得」写在脸上",
+          "from": "lanzhu",
+          "sec": "karin",
+          "vec": [
+            1,
+            1,
+            0.5,
+            1,
+            0.5,
+            0.5
+          ]
+        }
+      ]
+    },
+    {
+      "q": "遇到喜欢的人你会：",
+      "opts": [
+        {
+          "text": "心思细到能察觉语气变化",
+          "from": "ayumu",
+          "sec": "ai",
+          "vec": [
+            -0.5,
+            -0.5,
+            1,
+            -0.5,
+            0.5,
+            0
+          ]
+        },
+        {
+          "text": "不服气的表情藏不住",
+          "from": "kasumi",
+          "sec": "kanata",
+          "vec": [
+            0.5,
+            0.5,
+            0.5,
+            0.5,
+            -0.5,
+            0.5
+          ]
+        },
+        {
+          "text": "把情绪收在台下",
+          "from": "shizuku",
+          "sec": "setsuna",
+          "vec": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5,
+            1,
+            0
+          ]
+        },
+        {
+          "text": "越从容越让人安心",
+          "from": "karin",
+          "sec": "emma",
+          "vec": [
+            0.5,
+            0,
+            -0.5,
+            1,
+            1,
+            0.5
+          ]
+        }
+      ]
+    },
+    {
+      "q": "别人求助时你通常：",
+      "opts": [
+        {
+          "text": "笑声比人先到",
+          "from": "ai",
+          "sec": "rina",
+          "vec": [
+            1,
+            1,
+            0.5,
+            0.5,
+            -0.5,
+            1
+          ]
+        },
+        {
+          "text": "慢半拍也不慌",
+          "from": "kanata",
+          "sec": "shioriko",
+          "vec": [
+            -0.5,
+            -0.5,
+            0.5,
+            -0.5,
+            0.5,
+            -0.5
+          ]
+        },
+        {
+          "text": "眼里有光就停不下来",
+          "from": "setsuna",
+          "sec": "mia",
+          "vec": [
+            0.5,
+            1,
+            1,
+            0.5,
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "text": "把温柔给得很安静",
+          "from": "emma",
+          "sec": "lanzhu",
+          "vec": [
+            -0.5,
+            -0.5,
+            1,
+            -0.5,
+            1,
+            -0.5
+          ]
+        }
+      ]
+    },
+    {
+      "q": "独处的时候你在想：",
+      "opts": [
+        {
+          "text": "话少，心意很满",
+          "from": "rina",
+          "sec": "ayumu",
+          "vec": [
+            -1,
+            -0.5,
+            1,
+            -1,
+            -0.5,
+            0
+          ]
+        },
+        {
+          "text": "对就是对，错就是错",
+          "from": "shioriko",
+          "sec": "kasumi",
+          "vec": [
+            -0.5,
+            -0.5,
+            -1,
+            0.5,
+            1,
+            -1
+          ]
+        },
+        {
+          "text": "越被期待越紧张",
+          "from": "mia",
+          "sec": "shizuku",
+          "vec": [
+            -1,
+            0,
+            -1,
+            0,
+            -0.5,
+            1
+          ]
+        },
+        {
+          "text": "把野心写在台步里",
+          "from": "lanzhu",
+          "sec": "karin",
+          "vec": [
+            1,
+            1,
+            0.5,
+            1,
+            0.5,
+            0.5
           ]
         }
       ]
@@ -4922,6 +5402,7 @@ export const QUESTIONS = {
         {
           "text": "腼腆易怯场",
           "from": "kanon",
+          "sec": "ren",
           "vec": [
             -0.5,
             -0.5,
@@ -4934,6 +5415,7 @@ export const QUESTIONS = {
         {
           "text": "开朗热情",
           "from": "keke",
+          "sec": "kinako",
           "vec": [
             1,
             1,
@@ -4946,6 +5428,7 @@ export const QUESTIONS = {
         {
           "text": "元气活泼",
           "from": "chisato",
+          "sec": "mei",
           "vec": [
             1,
             0.5,
@@ -4958,6 +5441,7 @@ export const QUESTIONS = {
         {
           "text": "强硬好胜",
           "from": "sumire",
+          "sec": "shiki",
           "vec": [
             1,
             0.5,
@@ -4975,6 +5459,7 @@ export const QUESTIONS = {
         {
           "text": "沉稳认真",
           "from": "ren",
+          "sec": "natsumi",
           "vec": [
             -0.5,
             -0.5,
@@ -4987,6 +5472,7 @@ export const QUESTIONS = {
         {
           "text": "老实坚定",
           "from": "kinako",
+          "sec": "wien",
           "vec": [
             -0.5,
             0.5,
@@ -4999,6 +5485,7 @@ export const QUESTIONS = {
         {
           "text": "缺乏自信",
           "from": "mei",
+          "sec": "tomari",
           "vec": [
             -1,
             -0.5,
@@ -5011,6 +5498,7 @@ export const QUESTIONS = {
         {
           "text": "沉着冷静",
           "from": "shiki",
+          "sec": "kanon",
           "vec": [
             -1,
             -0.5,
@@ -5028,6 +5516,7 @@ export const QUESTIONS = {
         {
           "text": "开朗行动力强",
           "from": "natsumi",
+          "sec": "keke",
           "vec": [
             1,
             1,
@@ -5040,6 +5529,7 @@ export const QUESTIONS = {
         {
           "text": "竞争心极强",
           "from": "wien",
+          "sec": "chisato",
           "vec": [
             0.5,
             0.5,
@@ -5052,6 +5542,7 @@ export const QUESTIONS = {
         {
           "text": "讲求效率",
           "from": "tomari",
+          "sec": "sumire",
           "vec": [
             -0.5,
             -0.5,
@@ -5064,6 +5555,7 @@ export const QUESTIONS = {
         {
           "text": "善良为他人着想",
           "from": "kanon",
+          "sec": "ren",
           "vec": [
             -0.5,
             -0.5,
@@ -5081,6 +5573,7 @@ export const QUESTIONS = {
         {
           "text": "想到就立刻行动",
           "from": "keke",
+          "sec": "kinako",
           "vec": [
             1,
             1,
@@ -5093,6 +5586,7 @@ export const QUESTIONS = {
         {
           "text": "好胜想赢",
           "from": "chisato",
+          "sec": "mei",
           "vec": [
             1,
             0.5,
@@ -5105,6 +5599,7 @@ export const QUESTIONS = {
         {
           "text": "表现欲强",
           "from": "sumire",
+          "sec": "shiki",
           "vec": [
             1,
             0.5,
@@ -5117,6 +5612,7 @@ export const QUESTIONS = {
         {
           "text": "不擅闲聊",
           "from": "ren",
+          "sec": "natsumi",
           "vec": [
             -0.5,
             -0.5,
@@ -5134,6 +5630,7 @@ export const QUESTIONS = {
         {
           "text": "有责任心",
           "from": "kinako",
+          "sec": "wien",
           "vec": [
             -0.5,
             0.5,
@@ -5146,6 +5643,7 @@ export const QUESTIONS = {
         {
           "text": "其实害羞",
           "from": "mei",
+          "sec": "tomari",
           "vec": [
             -1,
             -0.5,
@@ -5158,6 +5656,7 @@ export const QUESTIONS = {
         {
           "text": "好奇爱探究本质",
           "from": "shiki",
+          "sec": "kanon",
           "vec": [
             -1,
             -0.5,
@@ -5170,6 +5669,7 @@ export const QUESTIONS = {
         {
           "text": "对流行敏感",
           "from": "natsumi",
+          "sec": "keke",
           "vec": [
             1,
             1,
@@ -5187,6 +5687,7 @@ export const QUESTIONS = {
         {
           "text": "才华出众而自负",
           "from": "wien",
+          "sec": "chisato",
           "vec": [
             0.5,
             0.5,
@@ -5199,6 +5700,7 @@ export const QUESTIONS = {
         {
           "text": "冷静分析",
           "from": "tomari",
+          "sec": "sumire",
           "vec": [
             -0.5,
             -0.5,
@@ -5211,6 +5713,7 @@ export const QUESTIONS = {
         {
           "text": "热爱歌唱",
           "from": "kanon",
+          "sec": "ren",
           "vec": [
             -0.5,
             -0.5,
@@ -5223,6 +5726,7 @@ export const QUESTIONS = {
         {
           "text": "遇难不放弃",
           "from": "keke",
+          "sec": "kinako",
           "vec": [
             1,
             1,
@@ -5240,6 +5744,7 @@ export const QUESTIONS = {
         {
           "text": "看问题一针见血",
           "from": "chisato",
+          "sec": "mei",
           "vec": [
             1,
             0.5,
@@ -5252,6 +5757,7 @@ export const QUESTIONS = {
         {
           "text": "内心温柔",
           "from": "sumire",
+          "sec": "shiki",
           "vec": [
             1,
             0.5,
@@ -5264,6 +5770,7 @@ export const QUESTIONS = {
         {
           "text": "自律严谨",
           "from": "ren",
+          "sec": "natsumi",
           "vec": [
             -0.5,
             -0.5,
@@ -5276,6 +5783,7 @@ export const QUESTIONS = {
         {
           "text": "跌倒再爬起",
           "from": "kinako",
+          "sec": "wien",
           "vec": [
             -0.5,
             0.5,
@@ -5293,6 +5801,7 @@ export const QUESTIONS = {
         {
           "text": "憧憬可爱事物",
           "from": "mei",
+          "sec": "tomari",
           "vec": [
             -1,
             -0.5,
@@ -5305,6 +5814,7 @@ export const QUESTIONS = {
         {
           "text": "喜静独处",
           "from": "shiki",
+          "sec": "kanon",
           "vec": [
             -1,
             -0.5,
@@ -5317,6 +5827,7 @@ export const QUESTIONS = {
         {
           "text": "为达目的肯下功夫",
           "from": "natsumi",
+          "sec": "keke",
           "vec": [
             1,
             1,
@@ -5329,6 +5840,7 @@ export const QUESTIONS = {
         {
           "text": "易与人冲突",
           "from": "wien",
+          "sec": "chisato",
           "vec": [
             0.5,
             0.5,
@@ -5346,6 +5858,7 @@ export const QUESTIONS = {
         {
           "text": "对梦想冷眼旁观",
           "from": "tomari",
+          "sec": "sumire",
           "vec": [
             -0.5,
             -0.5,
@@ -5358,6 +5871,7 @@ export const QUESTIONS = {
         {
           "text": "犹豫中仍向前走",
           "from": "kanon",
+          "sec": "ren",
           "vec": [
             -0.5,
             -0.5,
@@ -5370,6 +5884,7 @@ export const QUESTIONS = {
         {
           "text": "爱笑也爱哭",
           "from": "keke",
+          "sec": "kinako",
           "vec": [
             1,
             1,
@@ -5382,6 +5897,7 @@ export const QUESTIONS = {
         {
           "text": "关键时刻支撑伙伴",
           "from": "chisato",
+          "sec": "mei",
           "vec": [
             1,
             0.5,
@@ -5399,6 +5915,7 @@ export const QUESTIONS = {
         {
           "text": "理解他人情感",
           "from": "sumire",
+          "sec": "shiki",
           "vec": [
             1,
             0.5,
@@ -5411,6 +5928,7 @@ export const QUESTIONS = {
         {
           "text": "逐渐敞开心扉",
           "from": "ren",
+          "sec": "natsumi",
           "vec": [
             -0.5,
             -0.5,
@@ -5423,6 +5941,7 @@ export const QUESTIONS = {
         {
           "text": "努力改变自己",
           "from": "kinako",
+          "sec": "wien",
           "vec": [
             -0.5,
             0.5,
@@ -5435,6 +5954,7 @@ export const QUESTIONS = {
         {
           "text": "珍视朋友",
           "from": "mei",
+          "sec": "tomari",
           "vec": [
             -1,
             -0.5,
@@ -5452,6 +5972,7 @@ export const QUESTIONS = {
         {
           "text": "容易寂寞",
           "from": "shiki",
+          "sec": "kanon",
           "vec": [
             -1,
             -0.5,
@@ -5464,6 +5985,7 @@ export const QUESTIONS = {
         {
           "text": "伙伴低落时负责打气",
           "from": "natsumi",
+          "sec": "keke",
           "vec": [
             1,
             1,
@@ -5476,6 +5998,7 @@ export const QUESTIONS = {
         {
           "text": "不肯认输",
           "from": "wien",
+          "sec": "chisato",
           "vec": [
             0.5,
             0.5,
@@ -5488,6 +6011,7 @@ export const QUESTIONS = {
         {
           "text": "深爱姐姐",
           "from": "tomari",
+          "sec": "sumire",
           "vec": [
             -0.5,
             -0.5,
@@ -5505,6 +6029,7 @@ export const QUESTIONS = {
         {
           "text": "人前小声，歌声却亮",
           "from": "kanon",
+          "sec": "ren",
           "vec": [
             -0.5,
             -0.5,
@@ -5517,6 +6042,7 @@ export const QUESTIONS = {
         {
           "text": "情绪全写在脸上",
           "from": "keke",
+          "sec": "kinako",
           "vec": [
             1,
             1,
@@ -5529,6 +6055,7 @@ export const QUESTIONS = {
         {
           "text": "笑着把难题拆开来做",
           "from": "chisato",
+          "sec": "mei",
           "vec": [
             1,
             0.5,
@@ -5541,6 +6068,7 @@ export const QUESTIONS = {
         {
           "text": "人前张扬，人后细腻",
           "from": "sumire",
+          "sec": "shiki",
           "vec": [
             1,
             0.5,
@@ -5558,6 +6086,7 @@ export const QUESTIONS = {
         {
           "text": "先做到，再说到",
           "from": "ren",
+          "sec": "natsumi",
           "vec": [
             -0.5,
             -0.5,
@@ -5570,6 +6099,7 @@ export const QUESTIONS = {
         {
           "text": "笨拙但从不偷懒",
           "from": "kinako",
+          "sec": "wien",
           "vec": [
             -0.5,
             0.5,
@@ -5582,6 +6112,7 @@ export const QUESTIONS = {
         {
           "text": "人前退缩，人后在意",
           "from": "mei",
+          "sec": "tomari",
           "vec": [
             -1,
             -0.5,
@@ -5594,6 +6125,7 @@ export const QUESTIONS = {
         {
           "text": "先观察，再下结论",
           "from": "shiki",
+          "sec": "kanon",
           "vec": [
             -1,
             -0.5,
@@ -5611,6 +6143,7 @@ export const QUESTIONS = {
         {
           "text": "想到点子马上试",
           "from": "natsumi",
+          "sec": "keke",
           "vec": [
             1,
             1,
@@ -5623,6 +6156,7 @@ export const QUESTIONS = {
         {
           "text": "把对手当成镜子",
           "from": "wien",
+          "sec": "chisato",
           "vec": [
             0.5,
             0.5,
@@ -5635,6 +6169,7 @@ export const QUESTIONS = {
         {
           "text": "先算投入产出再行动",
           "from": "tomari",
+          "sec": "sumire",
           "vec": [
             -0.5,
             -0.5,
@@ -5647,6 +6182,7 @@ export const QUESTIONS = {
         {
           "text": "紧张到手心出汗也不退",
           "from": "kanon",
+          "sec": "ren",
           "vec": [
             -0.5,
             -0.5,
@@ -5664,6 +6200,7 @@ export const QUESTIONS = {
         {
           "text": "把「喜欢」喊得很大声",
           "from": "keke",
+          "sec": "kinako",
           "vec": [
             1,
             1,
@@ -5676,6 +6213,7 @@ export const QUESTIONS = {
         {
           "text": "不服输，但输得起",
           "from": "chisato",
+          "sec": "mei",
           "vec": [
             1,
             0.5,
@@ -5688,6 +6226,7 @@ export const QUESTIONS = {
         {
           "text": "被忽视会明显失落",
           "from": "sumire",
+          "sec": "shiki",
           "vec": [
             1,
             0.5,
@@ -5700,6 +6239,7 @@ export const QUESTIONS = {
         {
           "text": "对散漫零容忍",
           "from": "ren",
+          "sec": "natsumi",
           "vec": [
             -0.5,
             -0.5,
@@ -5717,6 +6257,7 @@ export const QUESTIONS = {
         {
           "text": "被否定会先记下来再改进",
           "from": "kinako",
+          "sec": "wien",
           "vec": [
             -0.5,
             0.5,
@@ -5729,6 +6270,7 @@ export const QUESTIONS = {
         {
           "text": "被肯定时会愣一下",
           "from": "mei",
+          "sec": "tomari",
           "vec": [
             -1,
             -0.5,
@@ -5741,6 +6283,7 @@ export const QUESTIONS = {
         {
           "text": "对「为什么」比对「是什么」上心",
           "from": "shiki",
+          "sec": "kanon",
           "vec": [
             -1,
             -0.5,
@@ -5753,6 +6296,7 @@ export const QUESTIONS = {
         {
           "text": "镜头前自来熟",
           "from": "natsumi",
+          "sec": "keke",
           "vec": [
             1,
             1,
@@ -5770,6 +6314,7 @@ export const QUESTIONS = {
         {
           "text": "赢了也嫌赢得不够漂亮",
           "from": "wien",
+          "sec": "chisato",
           "vec": [
             0.5,
             0.5,
@@ -5782,6 +6327,7 @@ export const QUESTIONS = {
         {
           "text": "情绪波动很小",
           "from": "tomari",
+          "sec": "sumire",
           "vec": [
             -0.5,
             -0.5,
@@ -5794,6 +6340,7 @@ export const QUESTIONS = {
         {
           "text": "把勇气一点点攒起来",
           "from": "kanon",
+          "sec": "ren",
           "vec": [
             -0.5,
             -0.5,
@@ -5806,6 +6353,7 @@ export const QUESTIONS = {
         {
           "text": "跌倒了拍拍灰继续跑",
           "from": "keke",
+          "sec": "kinako",
           "vec": [
             1,
             1,
@@ -5823,6 +6371,7 @@ export const QUESTIONS = {
         {
           "text": "把「赢」当成对伙伴的交代",
           "from": "chisato",
+          "sec": "mei",
           "vec": [
             1,
             0.5,
@@ -5835,6 +6384,7 @@ export const QUESTIONS = {
         {
           "text": "把温柔藏在好胜下面",
           "from": "sumire",
+          "sec": "shiki",
           "vec": [
             1,
             0.5,
@@ -5847,6 +6397,7 @@ export const QUESTIONS = {
         {
           "text": "把信任留给时间证明",
           "from": "ren",
+          "sec": "natsumi",
           "vec": [
             -0.5,
             -0.5,
@@ -5859,6 +6410,7 @@ export const QUESTIONS = {
         {
           "text": "把「再来一次」当口头禅",
           "from": "kinako",
+          "sec": "wien",
           "vec": [
             -0.5,
             0.5,
@@ -5876,6 +6428,7 @@ export const QUESTIONS = {
         {
           "text": "把「我不行」慢慢改成「我试试」",
           "from": "mei",
+          "sec": "tomari",
           "vec": [
             -1,
             -0.5,
@@ -5888,6 +6441,7 @@ export const QUESTIONS = {
         {
           "text": "把安静当成充电方式",
           "from": "shiki",
+          "sec": "kanon",
           "vec": [
             -1,
             -0.5,
@@ -5900,6 +6454,7 @@ export const QUESTIONS = {
         {
           "text": "把流量和人心都当学问",
           "from": "natsumi",
+          "sec": "keke",
           "vec": [
             1,
             1,
@@ -5912,6 +6467,7 @@ export const QUESTIONS = {
         {
           "text": "用实力堵住质疑",
           "from": "wien",
+          "sec": "chisato",
           "vec": [
             0.5,
             0.5,
@@ -5929,6 +6485,7 @@ export const QUESTIONS = {
         {
           "text": "把「有用」当成筛选标准",
           "from": "tomari",
+          "sec": "sumire",
           "vec": [
             -0.5,
             -0.5,
@@ -5941,6 +6498,7 @@ export const QUESTIONS = {
         {
           "text": "被推上台会腿软，但唱起来就忘了",
           "from": "kanon",
+          "sec": "ren",
           "vec": [
             -0.5,
             -0.5,
@@ -5953,6 +6511,7 @@ export const QUESTIONS = {
         {
           "text": "越多人看着越兴奋",
           "from": "keke",
+          "sec": "kinako",
           "vec": [
             1,
             1,
@@ -5965,6 +6524,7 @@ export const QUESTIONS = {
         {
           "text": "被朋友信赖时最有底气",
           "from": "chisato",
+          "sec": "mei",
           "vec": [
             1,
             0.5,
@@ -5984,6 +6544,7 @@ export const QUESTIONS = {
         {
           "text": "开朗笑容不断",
           "from": "kaho",
+          "sec": "rurino",
           "vec": [
             1,
             1,
@@ -5996,6 +6557,7 @@ export const QUESTIONS = {
         {
           "text": "过于认真",
           "from": "sayaka",
+          "sec": "megumi",
           "vec": [
             -0.5,
             -0.5,
@@ -6008,6 +6570,7 @@ export const QUESTIONS = {
         {
           "text": "文武双全",
           "from": "kozue",
+          "sec": "ginko",
           "vec": [
             0,
             0.5,
@@ -6020,6 +6583,7 @@ export const QUESTIONS = {
         {
           "text": "是天才却平易近人",
           "from": "tsuzuri",
+          "sec": "kosuzu",
           "vec": [
             0,
             -1,
@@ -6037,6 +6601,7 @@ export const QUESTIONS = {
         {
           "text": "开朗有活力",
           "from": "rurino",
+          "sec": "hime",
           "vec": [
             1,
             0.5,
@@ -6049,6 +6614,7 @@ export const QUESTIONS = {
         {
           "text": "专业意识强",
           "from": "megumi",
+          "sec": "izumi",
           "vec": [
             0.5,
             0.5,
@@ -6061,6 +6627,7 @@ export const QUESTIONS = {
         {
           "text": "热爱传统",
           "from": "ginko",
+          "sec": "ceras",
           "vec": [
             -0.5,
             -0.5,
@@ -6073,6 +6640,7 @@ export const QUESTIONS = {
         {
           "text": "勇于挑战",
           "from": "kosuzu",
+          "sec": "kaho",
           "vec": [
             0,
             0.5,
@@ -6090,6 +6658,7 @@ export const QUESTIONS = {
         {
           "text": "纯粹专注",
           "from": "hime",
+          "sec": "sayaka",
           "vec": [
             0.5,
             0.5,
@@ -6102,6 +6671,7 @@ export const QUESTIONS = {
         {
           "text": "冷静敏锐",
           "from": "izumi",
+          "sec": "kozue",
           "vec": [
             -0.5,
             -0.5,
@@ -6114,6 +6684,7 @@ export const QUESTIONS = {
         {
           "text": "热爱学园偶像",
           "from": "ceras",
+          "sec": "tsuzuri",
           "vec": [
             0.5,
             0.5,
@@ -6126,6 +6697,7 @@ export const QUESTIONS = {
         {
           "text": "高兴就全力投入",
           "from": "kaho",
+          "sec": "rurino",
           "vec": [
             1,
             1,
@@ -6143,6 +6715,7 @@ export const QUESTIONS = {
         {
           "text": "先计划再行动",
           "from": "sayaka",
+          "sec": "megumi",
           "vec": [
             -0.5,
             -0.5,
@@ -6155,6 +6728,7 @@ export const QUESTIONS = {
         {
           "text": "凡事拼命努力",
           "from": "kozue",
+          "sec": "ginko",
           "vec": [
             0,
             0.5,
@@ -6167,6 +6741,7 @@ export const QUESTIONS = {
         {
           "text": "容易寂寞",
           "from": "tsuzuri",
+          "sec": "kosuzu",
           "vec": [
             0,
             -1,
@@ -6179,6 +6754,7 @@ export const QUESTIONS = {
         {
           "text": "万事乐在其中",
           "from": "rurino",
+          "sec": "hime",
           "vec": [
             1,
             0.5,
@@ -6196,6 +6772,7 @@ export const QUESTIONS = {
         {
           "text": "深知自己魅力",
           "from": "megumi",
+          "sec": "izumi",
           "vec": [
             0.5,
             0.5,
@@ -6208,6 +6785,7 @@ export const QUESTIONS = {
         {
           "text": "重视传承",
           "from": "ginko",
+          "sec": "ceras",
           "vec": [
             -0.5,
             -0.5,
@@ -6220,6 +6798,7 @@ export const QUESTIONS = {
         {
           "text": "勤奋不气馁",
           "from": "kosuzu",
+          "sec": "kaho",
           "vec": [
             0,
             0.5,
@@ -6232,6 +6811,7 @@ export const QUESTIONS = {
         {
           "text": "谈所爱语速变快",
           "from": "hime",
+          "sec": "sayaka",
           "vec": [
             0.5,
             0.5,
@@ -6249,6 +6829,7 @@ export const QUESTIONS = {
         {
           "text": "直指问题核心",
           "from": "izumi",
+          "sec": "kozue",
           "vec": [
             -0.5,
             -0.5,
@@ -6261,6 +6842,7 @@ export const QUESTIONS = {
         {
           "text": "喜欢被搭理",
           "from": "ceras",
+          "sec": "tsuzuri",
           "vec": [
             0.5,
             0.5,
@@ -6273,6 +6855,7 @@ export const QUESTIONS = {
         {
           "text": "一往无前",
           "from": "kaho",
+          "sec": "rurino",
           "vec": [
             1,
             1,
@@ -6285,6 +6868,7 @@ export const QUESTIONS = {
         {
           "text": "笨拙却纯粹",
           "from": "sayaka",
+          "sec": "megumi",
           "vec": [
             -0.5,
             -0.5,
@@ -6302,6 +6886,7 @@ export const QUESTIONS = {
         {
           "text": "从不骄傲自满",
           "from": "kozue",
+          "sec": "ginko",
           "vec": [
             0,
             0.5,
@@ -6314,6 +6899,7 @@ export const QUESTIONS = {
         {
           "text": "常发呆神游",
           "from": "tsuzuri",
+          "sec": "kosuzu",
           "vec": [
             0,
             -1,
@@ -6326,6 +6912,7 @@ export const QUESTIONS = {
         {
           "text": "照顾身边人",
           "from": "rurino",
+          "sec": "hime",
           "vec": [
             1,
             0.5,
@@ -6338,6 +6925,7 @@ export const QUESTIONS = {
         {
           "text": "不感兴趣就不做",
           "from": "megumi",
+          "sec": "izumi",
           "vec": [
             0.5,
             0.5,
@@ -6355,6 +6943,7 @@ export const QUESTIONS = {
         {
           "text": "认真执着",
           "from": "ginko",
+          "sec": "ceras",
           "vec": [
             -0.5,
             -0.5,
@@ -6367,6 +6956,7 @@ export const QUESTIONS = {
         {
           "text": "偶尔看轻自己",
           "from": "kosuzu",
+          "sec": "kaho",
           "vec": [
             0,
             0.5,
@@ -6379,6 +6969,7 @@ export const QUESTIONS = {
         {
           "text": "容易激动",
           "from": "hime",
+          "sec": "sayaka",
           "vec": [
             0.5,
             0.5,
@@ -6391,6 +6982,7 @@ export const QUESTIONS = {
         {
           "text": "独立自主",
           "from": "izumi",
+          "sec": "kozue",
           "vec": [
             -0.5,
             -0.5,
@@ -6408,6 +7000,7 @@ export const QUESTIONS = {
         {
           "text": "有点爱撒娇",
           "from": "ceras",
+          "sec": "tsuzuri",
           "vec": [
             0.5,
             0.5,
@@ -6420,6 +7013,7 @@ export const QUESTIONS = {
         {
           "text": "率真烂漫",
           "from": "kaho",
+          "sec": "rurino",
           "vec": [
             1,
             1,
@@ -6432,6 +7026,7 @@ export const QUESTIONS = {
         {
           "text": "容易紧绷",
           "from": "sayaka",
+          "sec": "megumi",
           "vec": [
             -0.5,
             -0.5,
@@ -6444,6 +7039,7 @@ export const QUESTIONS = {
         {
           "text": "目标坚定",
           "from": "kozue",
+          "sec": "ginko",
           "vec": [
             0,
             0.5,
@@ -6461,6 +7057,7 @@ export const QUESTIONS = {
         {
           "text": "带着点孩子气",
           "from": "tsuzuri",
+          "sec": "kosuzu",
           "vec": [
             0,
             -1,
@@ -6473,6 +7070,7 @@ export const QUESTIONS = {
         {
           "text": "内心怕孤独",
           "from": "rurino",
+          "sec": "hime",
           "vec": [
             1,
             0.5,
@@ -6485,6 +7083,7 @@ export const QUESTIONS = {
         {
           "text": "为可爱费尽心力",
           "from": "megumi",
+          "sec": "izumi",
           "vec": [
             0.5,
             0.5,
@@ -6497,6 +7096,7 @@ export const QUESTIONS = {
         {
           "text": "有些不坦率",
           "from": "ginko",
+          "sec": "ceras",
           "vec": [
             -0.5,
             -0.5,
@@ -6514,6 +7114,7 @@ export const QUESTIONS = {
         {
           "text": "想找值得骄傲的事",
           "from": "kosuzu",
+          "sec": "kaho",
           "vec": [
             0,
             0.5,
@@ -6526,6 +7127,7 @@ export const QUESTIONS = {
         {
           "text": "全心投入安利",
           "from": "hime",
+          "sec": "sayaka",
           "vec": [
             0.5,
             0.5,
@@ -6538,6 +7140,7 @@ export const QUESTIONS = {
         {
           "text": "重视彼此强弱互补",
           "from": "izumi",
+          "sec": "kozue",
           "vec": [
             -0.5,
             -0.5,
@@ -6550,6 +7153,7 @@ export const QUESTIONS = {
         {
           "text": "执着投入",
           "from": "ceras",
+          "sec": "tsuzuri",
           "vec": [
             0.5,
             0.5,
@@ -6567,6 +7171,7 @@ export const QUESTIONS = {
         {
           "text": "想到就冲，笑声先到",
           "from": "kaho",
+          "sec": "rurino",
           "vec": [
             1,
             1,
@@ -6579,6 +7184,7 @@ export const QUESTIONS = {
         {
           "text": "把日程排得满满才安心",
           "from": "sayaka",
+          "sec": "megumi",
           "vec": [
             -0.5,
             -0.5,
@@ -6591,6 +7197,7 @@ export const QUESTIONS = {
         {
           "text": "做到最好也不觉得够",
           "from": "kozue",
+          "sec": "ginko",
           "vec": [
             0,
             0.5,
@@ -6603,6 +7210,7 @@ export const QUESTIONS = {
         {
           "text": "灵感来了就忘乎所以",
           "from": "tsuzuri",
+          "sec": "kosuzu",
           "vec": [
             0,
             -1,
@@ -6620,6 +7228,7 @@ export const QUESTIONS = {
         {
           "text": "热闹散场后会突然安静",
           "from": "rurino",
+          "sec": "hime",
           "vec": [
             1,
             0.5,
@@ -6632,6 +7241,7 @@ export const QUESTIONS = {
         {
           "text": "把「可爱」当事业经营",
           "from": "megumi",
+          "sec": "izumi",
           "vec": [
             0.5,
             0.5,
@@ -6644,6 +7254,7 @@ export const QUESTIONS = {
         {
           "text": "老规矩里藏着安心",
           "from": "ginko",
+          "sec": "ceras",
           "vec": [
             -0.5,
             -0.5,
@@ -6656,6 +7267,7 @@ export const QUESTIONS = {
         {
           "text": "跌倒了先爬起来再哭",
           "from": "kosuzu",
+          "sec": "kaho",
           "vec": [
             0,
             0.5,
@@ -6673,6 +7285,7 @@ export const QUESTIONS = {
         {
           "text": "一聊到热爱就停不下来",
           "from": "hime",
+          "sec": "sayaka",
           "vec": [
             0.5,
             0.5,
@@ -6685,6 +7298,7 @@ export const QUESTIONS = {
         {
           "text": "先看清，再出手",
           "from": "izumi",
+          "sec": "kozue",
           "vec": [
             -0.5,
             -0.5,
@@ -6697,6 +7311,7 @@ export const QUESTIONS = {
         {
           "text": "一被关注就眼睛发亮",
           "from": "ceras",
+          "sec": "tsuzuri",
           "vec": [
             0.5,
             0.5,
@@ -6709,6 +7324,7 @@ export const QUESTIONS = {
         {
           "text": "低落也很快被新奇冲走",
           "from": "kaho",
+          "sec": "rurino",
           "vec": [
             1,
             1,
@@ -6726,6 +7342,7 @@ export const QUESTIONS = {
         {
           "text": "出错会反复自责",
           "from": "sayaka",
+          "sec": "megumi",
           "vec": [
             -0.5,
             -0.5,
@@ -6738,6 +7355,7 @@ export const QUESTIONS = {
         {
           "text": "把努力当成呼吸一样自然",
           "from": "kozue",
+          "sec": "ginko",
           "vec": [
             0,
             0.5,
@@ -6750,6 +7368,7 @@ export const QUESTIONS = {
         {
           "text": "对「好玩」毫无抵抗力",
           "from": "tsuzuri",
+          "sec": "kosuzu",
           "vec": [
             0,
             -1,
@@ -6762,6 +7381,7 @@ export const QUESTIONS = {
         {
           "text": "把快乐分给所有人",
           "from": "rurino",
+          "sec": "hime",
           "vec": [
             1,
             0.5,
@@ -6779,6 +7399,7 @@ export const QUESTIONS = {
         {
           "text": "镜头感是算出来的",
           "from": "megumi",
+          "sec": "izumi",
           "vec": [
             0.5,
             0.5,
@@ -6791,6 +7412,7 @@ export const QUESTIONS = {
         {
           "text": "嘴上不说，手上照做",
           "from": "ginko",
+          "sec": "ceras",
           "vec": [
             -0.5,
             -0.5,
@@ -6803,6 +7425,7 @@ export const QUESTIONS = {
         {
           "text": "被肯定会偷偷开心很久",
           "from": "kosuzu",
+          "sec": "kaho",
           "vec": [
             0,
             0.5,
@@ -6815,6 +7438,7 @@ export const QUESTIONS = {
         {
           "text": "把喜欢安利给全世界",
           "from": "hime",
+          "sec": "sayaka",
           "vec": [
             0.5,
             0.5,
@@ -6832,6 +7456,7 @@ export const QUESTIONS = {
         {
           "text": "不依附，也不拖累",
           "from": "izumi",
+          "sec": "kozue",
           "vec": [
             -0.5,
             -0.5,
@@ -6844,6 +7469,7 @@ export const QUESTIONS = {
         {
           "text": "把「喜欢」挂在嘴边",
           "from": "ceras",
+          "sec": "tsuzuri",
           "vec": [
             0.5,
             0.5,
@@ -6856,6 +7482,7 @@ export const QUESTIONS = {
         {
           "text": "把「快乐」传染给全场",
           "from": "kaho",
+          "sec": "rurino",
           "vec": [
             1,
             1,
@@ -6868,6 +7495,7 @@ export const QUESTIONS = {
         {
           "text": "用准备抵消不安",
           "from": "sayaka",
+          "sec": "megumi",
           "vec": [
             -0.5,
             -0.5,
@@ -6885,6 +7513,7 @@ export const QUESTIONS = {
         {
           "text": "优秀是练出来的，不是天生的",
           "from": "kozue",
+          "sec": "ginko",
           "vec": [
             0,
             0.5,
@@ -6897,6 +7526,7 @@ export const QUESTIONS = {
         {
           "text": "把天才的包袱随手放下",
           "from": "tsuzuri",
+          "sec": "kosuzu",
           "vec": [
             0,
             -1,
@@ -6909,6 +7539,7 @@ export const QUESTIONS = {
         {
           "text": "用玩笑掩饰怕被留下",
           "from": "rurino",
+          "sec": "hime",
           "vec": [
             1,
             0.5,
@@ -6921,6 +7552,7 @@ export const QUESTIONS = {
         {
           "text": "只把精力给值得的事",
           "from": "megumi",
+          "sec": "izumi",
           "vec": [
             0.5,
             0.5,
@@ -6938,6 +7570,7 @@ export const QUESTIONS = {
         {
           "text": "把「传下去」当成责任",
           "from": "ginko",
+          "sec": "ceras",
           "vec": [
             -0.5,
             -0.5,
@@ -6950,6 +7583,7 @@ export const QUESTIONS = {
         {
           "text": "把「我还行」慢慢攒成「我可以」",
           "from": "kosuzu",
+          "sec": "kaho",
           "vec": [
             0,
             0.5,
@@ -6962,6 +7596,7 @@ export const QUESTIONS = {
         {
           "text": "情绪上来藏都藏不住",
           "from": "hime",
+          "sec": "sayaka",
           "vec": [
             0.5,
             0.5,
@@ -6974,6 +7609,7 @@ export const QUESTIONS = {
         {
           "text": "把「互补」当成合作前提",
           "from": "izumi",
+          "sec": "kozue",
           "vec": [
             -0.5,
             -0.5,
@@ -6991,6 +7627,7 @@ export const QUESTIONS = {
         {
           "text": "用撒娇换取多一点陪伴",
           "from": "ceras",
+          "sec": "tsuzuri",
           "vec": [
             0.5,
             0.5,
@@ -7003,6 +7640,7 @@ export const QUESTIONS = {
         {
           "text": "被新奇事物一勾就走",
           "from": "kaho",
+          "sec": "rurino",
           "vec": [
             1,
             1,
@@ -7015,6 +7653,7 @@ export const QUESTIONS = {
         {
           "text": "越没准备好越心慌",
           "from": "sayaka",
+          "sec": "megumi",
           "vec": [
             -0.5,
             -0.5,
@@ -7027,6 +7666,7 @@ export const QUESTIONS = {
         {
           "text": "被寄予期待就全力以赴",
           "from": "kozue",
+          "sec": "ginko",
           "vec": [
             0,
             0.5,
