@@ -388,11 +388,12 @@ legend {
 
 .avatar {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 22%;
+  inset: calc(6px * var(--site-space, 1));
+  width: calc(100% - 12px * var(--site-space, 1));
+  height: calc(100% - 12px * var(--site-space, 1));
+  object-fit: contain;
+  background: color-mix(in srgb, var(--member-color, var(--site-accent)) 8%, var(--site-surface));
+  border-radius: 50%;
 }
 
 .avatar-frame .monogram {
