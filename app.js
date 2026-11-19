@@ -227,6 +227,7 @@ function resultView(gid, answers, seed) {
       <button class="btn btn-ghost" type="button" data-again>改答案</button>
       <a class="btn btn-ghost" href="#/">换另一个团</a>
       <button class="btn btn-ghost" type="button" data-copy>复制结果链接</button>
+      <a class="btn btn-ghost" href="#/">主页</a>
     </div>
   </section>`;
 }
