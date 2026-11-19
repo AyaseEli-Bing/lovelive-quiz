@@ -135,7 +135,7 @@ function menuView() {
   }).join("");
   return `<section>
     <h2 class="view-title" tabindex="-1">先选一个团体</h2>
-    <p class="view-lead">已开放的团体各有一套独立情景题，每次打开题目与选项顺序都会重新打乱；答完得到该团内匹配度最高的成员，以及完整九人排行。</p>
+    <p class="view-lead">已开放的团体各有一套独立情景题，每次打开题目与选项顺序都会重新打乱；答完得到该团内匹配度最高的成员，以及完整成员排行。</p>
     <div class="group-menu">${cards}</div>
   </section>`;
 }
@@ -177,7 +177,8 @@ function resultView(gid, answers, seed) {
   const gap = top.pct - runnerUp.pct;
   const colorTitle = `色名：${m.colorName}${m.colorNote ? "。" + m.colorNote : ""}`;
   const colorMeta = `<span class="meta-color" title="${colorTitle}"><i aria-hidden="true"></i>#${m.color.slice(1).toUpperCase()}${m.colorNote ? "*" : ""}</span>`;
-  const meta = `<p class="meta-line">${m.grade} · ${m.birthday} · ${m.blood}型 · ${colorMeta}</p>`;
+  const facts = [m.grade, m.birthday, m.blood ? m.blood + "型" : null].filter(Boolean).join(" · ");
+  const meta = `<p class="meta-line">${facts} · ${colorMeta}</p>`;
   const traits = m.traits.map((t) => `<li>${t}</li>`).join("");
   const rows = ranked.map((r, i) => {
     const rm = MEMBERS[r.id];
@@ -204,7 +205,7 @@ function resultView(gid, answers, seed) {
           <p class="result-romaji">${m.nameJa} / ${m.romaji}</p>
         </div>
       </div>
-      <p class="match-line"><span class="match-pct">${top.pct}%</span><span class="match-label">匹配度 · 本团 9 人中的最高分</span></p>
+      <p class="match-line"><span class="match-pct">${top.pct}%</span><span class="match-label">匹配度 · 本团 ${membersOf(gid).length} 人中的最高分</span></p>
       ${meta}
       <div class="traits"><h3>像她的地方</h3><ul>${traits}</ul></div>
       <img class="result-watermark" src="./assets/avatars/${top.id}.png" alt="" aria-hidden="true"
