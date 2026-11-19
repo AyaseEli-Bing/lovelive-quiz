@@ -98,19 +98,17 @@ function userVec(gid, answers, seed) {
 }
 
 function score(gid, answers, seed) {
-  const v = userVec(gid, answers, seed);
-  const nv = Math.hypot(...v);
+  const qs = buildOrder(gid, seed);
+  const count = {}, maxFrom = {};
+  for (const id of membersOf(gid)) { count[id] = 0; maxFrom[id] = 0; }
+  qs.forEach((question, qi) => {
+    for (const o of question.opts) maxFrom[o.from] = (maxFrom[o.from] || 0) + 1;
+    const chosen = question.opts[answers[qi]];
+    count[chosen.from] += 1;
+  });
   return membersOf(gid)
-    .map((id) => {
-      const p = MEMBERS[id].profile;
-      const np = Math.hypot(...p);
-      let dot = 0;
-      for (let d = 0; d < 6; d++) dot += v[d] * p[d];
-      const cos = nv > 0 && np > 0 ? dot / (nv * np) : 0;
-      const dist = Math.hypot(...v.map((x, d) => x - p[d]));
-      return { id, cos, dist, pct: Math.round((100 * (cos + 1)) / 2) };
-    })
-    .sort((a, b) => b.cos - a.cos || a.dist - b.dist);
+    .map((id) => ({ id, count: count[id], pct: maxFrom[id] ? Math.round((100 * count[id]) / maxFrom[id]) : 0 }))
+    .sort((x, y) => y.count - x.count || y.pct - x.pct);
 }
 
 const optKeys = ["1", "2", "3", "4"];
@@ -221,7 +219,7 @@ function resultView(gid, answers, seed) {
     <div class="ranking">
       <h3>${GROUPS[gid].name} 完整排行</h3>
       ${rows}
-      <p class="rank-note">${lead} 相似度＝作答方向与成员画像的夹角：100% 同向，50% 无关。</p>
+      <p class="rank-note">${lead} 匹配度＝选到该成员代表选项的比例，仅在本团内比较。</p>
     </div>
     <div class="actions">
       <button class="btn btn-primary" type="button" data-export>保存结果图</button>
