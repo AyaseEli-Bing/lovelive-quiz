@@ -1,4 +1,4 @@
-import { GROUPS, MEMBERS, QUESTIONS } from "./data.js";
+import { DIMENSIONS, GROUPS, MEMBERS, QUESTIONS } from "./data.js";
 
 const app = document.getElementById("app");
 
@@ -85,28 +85,30 @@ function parseHash() {
   return { view: answers.length >= order.length ? "result" : "quiz", gid, seed, answers };
 }
 
-function score(gid, answers, seed) {
+function userVec(gid, answers, seed) {
   const qs = buildOrder(gid, seed);
-  const tally = {};
-  for (const id of membersOf(gid)) tally[id] = { score: 0, primaries: 0, ceiling: 0 };
+  const v = [0, 0, 0, 0, 0, 0];
   qs.forEach((question, qi) => {
-    for (const id of membersOf(gid)) {
-      let attainable = 0;
-      for (const opt of question.opts) {
-        const hit = opt.hit.find(([m]) => m === id);
-        if (hit && hit[1] > attainable) attainable = hit[1];
-      }
-      tally[id].ceiling += attainable;
-    }
-    const chosen = question.opts[answers[qi]];
-    for (const [id, w] of chosen.hit) {
-      tally[id].score += w;
-      if (w === 3) tally[id].primaries += 1;
-    }
+    const vec = question.opts[answers[qi]].vec;
+    for (let d = 0; d < 6; d++) v[d] += vec[d];
   });
+  return v;
+}
+
+function score(gid, answers, seed) {
+  const v = userVec(gid, answers, seed);
+  const nv = Math.hypot(...v);
   return membersOf(gid)
-    .map((id) => ({ id, ...tally[id], pct: Math.round((100 * tally[id].score) / tally[id].ceiling) }))
-    .sort((a, b) => b.pct - a.pct || b.primaries - a.primaries || b.score - a.score);
+    .map((id) => {
+      const p = MEMBERS[id].profile;
+      const np = Math.hypot(...p);
+      let dot = 0;
+      for (let d = 0; d < 6; d++) dot += v[d] * p[d];
+      const cos = nv > 0 && np > 0 ? dot / (nv * np) : 0;
+      const dist = Math.hypot(...v.map((x, d) => x - p[d]));
+      return { id, cos, dist, pct: Math.round((100 * (cos + 1)) / 2) };
+    })
+    .sort((a, b) => b.cos - a.cos || a.dist - b.dist);
 }
 
 const optKeys = ["1", "2", "3", "4"];
@@ -135,7 +137,7 @@ function menuView() {
   }).join("");
   return `<section>
     <h2 class="view-title" tabindex="-1">先选一个团体</h2>
-    <p class="view-lead">已开放的团体各有一套独立情景题，每次打开题目与选项顺序都会重新打乱；答完得到该团内匹配度最高的成员，以及完整成员排行。</p>
+    <p class="view-lead">已开放的团体各有一套独立情景题，每次打开题目与选项顺序都会重新打乱；答完得到该团内相似度最高的成员，以及完整成员排行。</p>
     <div class="group-menu">${cards}</div>
   </section>`;
 }
@@ -180,6 +182,9 @@ function resultView(gid, answers, seed) {
   const facts = [m.grade, m.birthday, m.blood ? m.blood + "型" : null].filter(Boolean).join(" · ");
   const meta = `<p class="meta-line">${facts} · ${colorMeta}</p>`;
   const traits = m.traits.map((t) => `<li>${t}</li>`).join("");
+  const uv = userVec(gid, answers, seed);
+  const topDims = DIMENSIONS.map((d, i) => ({ d, s: uv[i] * m.profile[i] })).sort((x, y) => y.s - x.s).slice(0, 2)
+    .map((x) => `<span class="chip">${x.s >= 0 ? x.d.pos : x.d.neg}</span>`).join("");
   const rows = ranked.map((r, i) => {
     const rm = MEMBERS[r.id];
     return `<div class="rank-row" style="--member-color:${rm.color}">
@@ -190,7 +195,7 @@ function resultView(gid, answers, seed) {
     </div>`;
   }).join("");
   const lead = gap > 0 ? `比第二名 ${runnerUp && MEMBERS[runnerUp.id].nameZh} 高 ${gap} 个百分点。`
-    : `与第二名同分，按主问题命中数排在前面。`;
+    : `与第二名相似度持平，按性格维度距离排在前面。`;
   return `<section>
     <article class="result-card" style="--member-color:${m.color}">
       <span class="result-glow" aria-hidden="true"></span>
@@ -205,16 +210,17 @@ function resultView(gid, answers, seed) {
           <p class="result-romaji">${m.nameJa} / ${m.romaji}</p>
         </div>
       </div>
-      <p class="match-line"><span class="match-pct">${top.pct}%</span><span class="match-label">匹配度 · 本团 ${membersOf(gid).length} 人中的最高分</span></p>
+      <p class="match-line"><span class="match-pct">${top.pct}%</span><span class="match-label">相似度 · 本团 ${membersOf(gid).length} 人中最契合</span></p>
       ${meta}
       <div class="traits"><h3>像她的地方</h3><ul>${traits}</ul></div>
+      <div class="unit-row" aria-label="最契合的性格维度">${topDims}</div>
       <img class="result-watermark" src="./assets/avatars/${top.id}.png" alt="" aria-hidden="true"
            decoding="async" onerror="this.remove()">
     </article>
     <div class="ranking">
       <h3>${GROUPS[gid].name} 完整排行</h3>
       ${rows}
-      <p class="rank-note">${lead} 匹配度按「本成员在这些题里能拿到的满分」折算，因此不同团、不同题量之间不可直接比较。</p>
+      <p class="rank-note">${lead} 相似度按你的作答方向与成员性格画像的夹角折算：100% 为完全同向，50% 为互不相关；各团画像独立，跨团不可直接比较。</p>
     </div>
     <div class="actions">
       <button class="btn btn-primary" type="button" data-restart>再测一次</button>
