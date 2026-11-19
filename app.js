@@ -182,7 +182,7 @@ function resultView(gid, answers, seed) {
   const colorMeta = `<span class="meta-color" title="${colorTitle}"><i aria-hidden="true"></i>#${m.color.slice(1).toUpperCase()}${m.colorNote ? "*" : ""}</span>`;
   const facts = [m.grade, m.birthday, m.blood ? m.blood + "型" : null].filter(Boolean).join(" · ");
   const meta = `<p class="meta-line">${facts} · ${colorMeta}</p>`;
-  const traits = m.traits.map((t) => `<li>${t}</li>`).join("");
+  const traits = m.traits.slice(0,4).map((t) => `<li>${t}</li>`).join("");
   const uv = userVec(gid, answers, seed);
   const topDims = DIMENSIONS.map((d, i) => ({ d, s: uv[i] * m.profile[i] })).sort((x, y) => y.s - x.s).slice(0, 2)
     .map((x) => `<span class="chip">${x.s >= 0 ? x.d.pos : x.d.neg}</span>`).join("");
