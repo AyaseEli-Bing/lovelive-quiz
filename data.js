@@ -52,8 +52,7 @@ export const GROUPS = {
     "units": [
       "Cerise Bouquet",
       "DOLLCHESTRA",
-      "Mira-Cra Park!",
-      "黄昏燐光"
+      "Mira-Cra Park!"
     ]
   }
 };
@@ -1035,7 +1034,7 @@ export const MEMBERS = {
     "nameJa": "桂城泉",
     "nameZh": "桂城泉",
     "romaji": "Katsuragi Izumi",
-    "unit": "黄昏燐光",
+    "unit": "Edel Note",
     "color": "#1EBECD",
     "colorName": "骑士绿",
     "birthday": "12月1日",
