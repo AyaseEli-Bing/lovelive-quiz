@@ -347,33 +347,7 @@ async function exportResult(gid, answers, seed) {
   window.dispatchEvent(new CustomEvent("resultexported", { detail: { w: W, h: H, bytes: blob.size, id: top.id } }));
 }
 
-const warnSeen = new Set();
-
-function maybeWarn(gid, atStart) {
-  if (!atStart || !GROUPS[gid] || warnSeen.has(gid)) return;
-  warnSeen.add(gid);
-  const box = document.createElement("div");
-  box.className = "modal-overlay";
-  box.setAttribute("role", "dialog");
-  box.setAttribute("aria-modal", "true");
-  box.innerHTML = `<div class="modal">
-    <h2>测试版提醒</h2>
-    <p>${GROUPS[gid].name} 的题目仍在打磨，尚未完整测试，结果可能偏差较大，仅供娱乐参考。</p>
-    <div class="modal-actions">
-      <button class="btn btn-primary" type="button" data-warn-ok>继续答题</button>
-      <a class="btn btn-ghost" href="#/" data-warn-home>返回主页</a>
-    </div>
-  </div>`;
-  box.addEventListener("click", (e) => {
-    if (e.target === box || e.target.closest("[data-warn-ok], [data-warn-home]")) box.remove();
-  });
-  document.body.appendChild(box);
-  const ok = box.querySelector("[data-warn-ok]");
-  if (ok) ok.focus();
-}
-
 function render() {
-  document.querySelectorAll(".modal-overlay").forEach((n) => n.remove());
   const state = parseHash();
   if (state.view === "log") {
     app.innerHTML = logView();
@@ -388,7 +362,6 @@ function render() {
   app.innerHTML = state.view === "quiz"
     ? quizView(state.gid, state.answers, state.seed)
     : resultView(state.gid, state.answers, state.seed);
-  if (state.view === "quiz") maybeWarn(state.gid, state.answers.length === 0);
   const anchor = app.querySelector(state.view === "quiz" ? ".quiz-head .view-title" : ".result-name");
   anchor.focus({ preventScroll: true });
 }
@@ -430,7 +403,6 @@ app.addEventListener("click", (event) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.metaKey || event.ctrlKey || event.altKey) return;
-  if (document.querySelector(".modal-overlay")) return;
   const state = parseHash();
   if (state.view !== "quiz") return;
   const order = buildOrder(state.gid, state.seed);
